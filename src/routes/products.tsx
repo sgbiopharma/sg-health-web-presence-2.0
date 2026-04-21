@@ -2,6 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Pill, Stethoscope } from "lucide-react";
 import brandsImg from "@/assets/brands.jpg";
 import equipmentImg from "@/assets/equipment.jpg";
+import abbottLogo from "@/assets/brands/abbott.jpg";
+import sdBiosensorLogo from "@/assets/brands/sd-biosensor.jpg";
+import wondfoLogo from "@/assets/brands/wondfo.jpg";
+import indoplasLogo from "@/assets/brands/indoplas.jpg";
+import mindrayLogo from "@/assets/brands/mindray.png";
+import fujifilmLogo from "@/assets/brands/fujifilm.png";
+import gskLogo from "@/assets/brands/gsk.jpg";
+import sanofiLogo from "@/assets/brands/sanofi.png";
+import unilabLogo from "@/assets/brands/unilab.jpg";
+import saharLogo from "@/assets/brands/sahar.jpg";
+import ankeLogo from "@/assets/brands/anke.jpg";
+import nelpaLogo from "@/assets/brands/nelpa.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -16,18 +28,18 @@ export const Route = createFileRoute("/products")({
 });
 
 const brands = [
-  { name: "Abbott", desc: "Global leader in diagnostics, devices, and nutrition." },
-  { name: "SD Biosensor", desc: "Rapid in-vitro diagnostic test kits and analyzers." },
-  { name: "Wondfo", desc: "Point-of-care diagnostic solutions across categories." },
-  { name: "Indoplas", desc: "Reliable medical consumables and supplies." },
-  { name: "Mindray", desc: "Patient monitoring, imaging, and IVD equipment." },
-  { name: "Fujifilm", desc: "Imaging and life-science healthcare technologies." },
-  { name: "GSK", desc: "Innovative vaccines and prescription medicines." },
-  { name: "Sanofi", desc: "Trusted vaccines and therapeutic products." },
-  { name: "Unilab", desc: "Leading Philippine pharmaceutical brand." },
-  { name: "Sahar", desc: "Quality pharmaceutical and healthcare products." },
-  { name: "Anke", desc: "Advanced diagnostic imaging systems." },
-  { name: "Nelpa", desc: "Trusted Filipino pharmaceutical brand." },
+  { name: "Abbott", logo: abbottLogo, desc: "Global leader in diagnostics, devices, and nutrition." },
+  { name: "SD Biosensor", logo: sdBiosensorLogo, desc: "Rapid in-vitro diagnostic test kits and analyzers." },
+  { name: "Wondfo", logo: wondfoLogo, desc: "Point-of-care diagnostic solutions across categories." },
+  { name: "Indoplas", logo: indoplasLogo, desc: "Reliable medical consumables and supplies." },
+  { name: "Mindray", logo: mindrayLogo, desc: "Patient monitoring, imaging, and IVD equipment." },
+  { name: "Fujifilm", logo: fujifilmLogo, desc: "Imaging and life-science healthcare technologies." },
+  { name: "GSK", logo: gskLogo, desc: "Innovative vaccines and prescription medicines." },
+  { name: "Sanofi", logo: sanofiLogo, desc: "Trusted vaccines and therapeutic products." },
+  { name: "Unilab", logo: unilabLogo, desc: "Leading Philippine pharmaceutical brand." },
+  { name: "Sahar", logo: saharLogo, desc: "Quality pharmaceutical and healthcare products." },
+  { name: "Anke", logo: ankeLogo, desc: "Advanced diagnostic imaging systems." },
+  { name: "Nelpa", logo: nelpaLogo, desc: "Trusted Filipino pharmaceutical brand." },
 ];
 
 const equipment = [
@@ -104,9 +116,19 @@ function ProductsPage() {
               {brands.map((b) => (
                 <article
                   key={b.name}
-                  className="rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+                  className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
                 >
-                  <h3 className="text-base font-bold text-primary-deep">{b.name}</h3>
+                  <div className="flex h-16 items-center justify-center rounded-lg bg-white p-2">
+                    <img
+                      src={b.logo}
+                      alt={`${b.name} logo`}
+                      width={200}
+                      height={120}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-base font-bold text-primary-deep">{b.name}</h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{b.desc}</p>
                 </article>
               ))}
