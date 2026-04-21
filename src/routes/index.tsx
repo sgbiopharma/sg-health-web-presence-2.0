@@ -1,6 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-pharma.jpg";
+import cdcLogo from "@/assets/clients/cdc.jpg";
+import ciacLogo from "@/assets/clients/ciac.jpg";
+import citemLogo from "@/assets/clients/citem.jpg";
+import depedLogo from "@/assets/clients/deped.jpg";
+import dohLogo from "@/assets/clients/doh.jpg";
+import greencityLogo from "@/assets/clients/greencity.jpg";
+import mexicoLogo from "@/assets/clients/mexico.jpg";
+import sanAntonioLogo from "@/assets/clients/san-antonio.jpg";
+import oraniLogo from "@/assets/clients/orani.jpg";
+import mchphuLogo from "@/assets/clients/mchphu.jpg";
+import psauLogo from "@/assets/clients/psau.jpg";
+import sacredHeartLogo from "@/assets/clients/sacred-heart.jpg";
+import jblmghLogo from "@/assets/clients/jblmgh.jpg";
+import jvghLogo from "@/assets/clients/jvgh.jpg";
+import angelesLogo from "@/assets/clients/angeles.jpg";
+import sanFernandoLogo from "@/assets/clients/san-fernando.jpg";
+import stoRosarioLogo from "@/assets/clients/sto-rosario.jpg";
+import aspacLogo from "@/assets/clients/aspac.jpg";
+import sercomLogo from "@/assets/clients/sercom.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,22 +34,25 @@ export const Route = createFileRoute("/")({
 });
 
 const clients = [
-  "Clark Development Corporation",
-  "Clark International Airport",
-  "CITEM",
-  "DepEd — Pampanga",
-  "DOH Central Luzon",
-  "GreenCity Medical Center",
-  "Bayan ng Mexico",
-  "Bayan ng San Antonio",
-  "Bayan ng Orani",
-  "Pampanga State Agricultural University",
-  "AC Sacred Heart Medical Center",
-  "City of San Fernando",
-  "Aspac",
-  "Sercom Philippines Inc.",
-  "Jose B. Lingad Memorial General Hospital",
-  "Lungsod ng Angeles",
+  { name: "Clark Development Corporation", logo: cdcLogo },
+  { name: "Clark International Airport Corporation", logo: ciacLogo },
+  { name: "CITEM", logo: citemLogo },
+  { name: "DepEd — Region III, Division of Pampanga", logo: depedLogo },
+  { name: "DOH Central Luzon", logo: dohLogo },
+  { name: "GreenCity Medical Center", logo: greencityLogo },
+  { name: "Bayan ng Mexico, Pampanga", logo: mexicoLogo },
+  { name: "Bayan ng San Antonio, Zambales", logo: sanAntonioLogo },
+  { name: "Bayan ng Orani, Bataan", logo: oraniLogo },
+  { name: "Mexico Community Hospital — Public Health Unit", logo: mchphuLogo },
+  { name: "Pampanga State Agricultural University", logo: psauLogo },
+  { name: "AC Sacred Heart Medical Center", logo: sacredHeartLogo },
+  { name: "Jose B. Lingad Memorial General Hospital", logo: jblmghLogo },
+  { name: "Joni Villanueva General Hospital", logo: jvghLogo },
+  { name: "Lungsod ng Angeles", logo: angelesLogo },
+  { name: "City of San Fernando, Pampanga", logo: sanFernandoLogo },
+  { name: "Sto. Rosario Elementary School — San Luis, Pampanga", logo: stoRosarioLogo },
+  { name: "ASPAC", logo: aspacLogo },
+  { name: "Sercom Philippines Inc.", logo: sercomLogo },
 ];
 
 function HomePage() {
@@ -147,14 +169,24 @@ function HomePage() {
               Healthcare for consistent, quality healthcare supply.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {clients.map((c) => (
-              <div
-                key={c}
-                className="flex min-h-[88px] items-center justify-center rounded-xl border border-border bg-card px-4 text-center text-sm font-semibold text-primary-deep shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+              <article
+                key={c.name}
+                className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
               >
-                {c}
-              </div>
+                <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-white p-2">
+                  <img
+                    src={c.logo}
+                    alt={`${c.name} logo`}
+                    width={160}
+                    height={160}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <p className="text-xs font-semibold leading-snug text-primary-deep sm:text-sm">{c.name}</p>
+              </article>
             ))}
           </div>
         </div>

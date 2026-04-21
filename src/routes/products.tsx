@@ -39,13 +39,33 @@ const equipment = [
   { name: "Surgical Equipment", desc: "Reliable instruments for operating rooms." },
 ];
 
-const vaccines = [
-  "Anti-Tetanus Serum", "BCG Serum", "DPT Combi Pedia", "TD Booster",
-  "Dengue Kit", "ERIG (Vinrab)", "Erythropoietin", "Hepatitis A",
-  "Hepatitis B", "HPV", "Influenza", "Japanese Encephalitis",
-  "MMR", "Meningococcal", "Measles (M-VAC)", "Poliomyelitis",
-  "Pneumococcal", "Rabies", "Rotavirus", "Shingles (Zostavac)",
-  "Tetanus Toxoid", "Typhoid", "Varicella",
+const vaccineCategories: { name: string; types: string[] }[] = [
+  { name: "Anti-Tetanus Serum", types: ["Antitet 1500 IU", "Sharjvax 1500 IU", "Sharjvax 3000 IU"] },
+  { name: "BCG", types: ["BCG Serum"] },
+  { name: "DPT Combi Pedia", types: ["Hexaxim", "Infanrix Hexa", "Pentaxim", "Infanrix IPV+HIB"] },
+  { name: "TD Booster", types: ["Adacel", "Boostrix"] },
+  { name: "Dengue Kit", types: ["Dengue Test Kit"] },
+  { name: "ERIG", types: ["Vinrab"] },
+  { name: "Erythropoietin", types: ["Epoetin Alfa 4000 IU (Eposino)"] },
+  { name: "Hepatitis A", types: ["Havrix Adult", "Havrix Jr."] },
+  { name: "Hepatitis B", types: ["Amvax Adult", "Amvax Pedia", "Euvax B Adult", "Euvax B Pedia", "Genvac Adult", "Genvac Pedia"] },
+  { name: "Hepatitis A & B Combi", types: ["Twinrix Adult"] },
+  { name: "Hepa B Immunoglobulin", types: ["Hepabig"] },
+  { name: "HPV", types: ["Cervarix", "Gardasil", "Gardasil Nano"] },
+  { name: "Influenza", types: ["Fluarixtetra", "Influvac Trivalent", "Influvac Tetra", "Vaxigrip Tetra"] },
+  { name: "Japanese Encephalitis", types: ["Imojev"] },
+  { name: "MMR", types: ["MMR II", "Priorix", "Tresivac"] },
+  { name: "Meningococcal", types: ["Menactra", "Nimentrix"] },
+  { name: "Measles", types: ["M-VAC"] },
+  { name: "Poliomyelitis", types: ["Imovac Polio"] },
+  { name: "Pneumococcal", types: ["Pneumovax 23", "Prevenar 13", "Synflorix"] },
+  { name: "Rabies", types: ["Abhayrab", "Speeda", "Verorab"] },
+  { name: "Rotavirus", types: ["Rotarix", "Rotateq", "Rotasil"] },
+  { name: "Shingles", types: ["Zostavac"] },
+  { name: "Tetanus Toxoid", types: ["Imatet", "T-VAC"] },
+  { name: "Tetanus Immunoglobulin", types: ["Sero-Tet"] },
+  { name: "Typhoid", types: ["Typbar", "Typhim VI"] },
+  { name: "Varicella", types: ["Varilrix", "Varivax", "Mevacvari"] },
 ];
 
 function ProductsPage() {
@@ -103,11 +123,24 @@ function ProductsPage() {
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Meticulously selected vaccines covering viral infections, bacterial diseases, and preventable illnesses — sourced from globally renowned manufacturers.
           </p>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {vaccines.map((v) => (
-              <div key={v} className="rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold text-primary-deep shadow-sm">
-                {v}
-              </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {vaccineCategories.map((v) => (
+              <article
+                key={v.name}
+                className="rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+              >
+                <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary-deep">
+                  {v.name}
+                </h3>
+                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                  {v.types.map((t) => (
+                    <li key={t} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </div>
