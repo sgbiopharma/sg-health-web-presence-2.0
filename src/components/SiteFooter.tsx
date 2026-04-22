@@ -7,13 +7,16 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border bg-[image:var(--gradient-primary)] text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-4 md:px-8">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-3">
-            <div className="rounded-full bg-white/15 p-1.5 backdrop-blur">
-              <img src={logo} alt="SG Global Healthcare Corp" width={44} height={44} className="h-11 w-11" />
-            </div>
-            <div>
-              <div className="text-lg font-extrabold tracking-tight">SG GLOBAL HEALTHCARE CORP</div>
-              <div className="text-xs uppercase tracking-[0.2em] text-primary-foreground/80">Delivering Wellness, Ensuring Access</div>
+          <div>
+            <img
+              src={logo}
+              alt="SG Biopharma logo"
+              width={320}
+              height={320}
+              className="h-20 w-auto rounded-2xl bg-white p-2 object-contain shadow-sm"
+            />
+            <div className="mt-4 text-xs uppercase tracking-[0.2em] text-primary-foreground/80">
+              Delivering Wellness, Ensuring Access
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/85">
