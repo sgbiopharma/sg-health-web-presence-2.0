@@ -16,11 +16,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt="SG Global Healthcare Corp logo" width={48} height={48} className="h-12 w-12" />
-          <div className="leading-tight">
-            <div className="text-base font-extrabold tracking-tight text-primary-deep md:text-lg">SG GLOBAL</div>
-            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary md:text-xs">Healthcare Corp</div>
-          </div>
+          <img
+            src={logo}
+            alt="SG Biopharma logo"
+            width={320}
+            height={320}
+            className="h-14 w-auto object-contain md:h-16"
+          />
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {nav.map((n) => (
