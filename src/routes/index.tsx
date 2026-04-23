@@ -94,11 +94,11 @@ function HomePage() {
             </div>
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6">
               <div>
-                <dt className="text-3xl font-extrabold text-primary-deep">500+</dt>
+                <dt className="text-3xl font-extrabold text-primary-deep">50+</dt>
                 <dd className="text-xs uppercase tracking-wider text-muted-foreground">Products</dd>
               </div>
               <div>
-                <dt className="text-3xl font-extrabold text-primary-deep">50+</dt>
+                <dt className="text-3xl font-extrabold text-primary-deep">10+</dt>
                 <dd className="text-xs uppercase tracking-wider text-muted-foreground">Partner brands</dd>
               </div>
               <div>
