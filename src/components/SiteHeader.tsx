@@ -13,7 +13,7 @@ const nav = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-[#ECFCEF]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
@@ -53,7 +53,7 @@ export function SiteHeader() {
         </button>
       </div>
       {open && (
-        <div className="border-t border-border/60 bg-[#ECFCEF] md:hidden">
+        <div className="border-t border-border/60 bg-background md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-4 py-3">
             {nav.map((n) => (
               <Link
