@@ -67,12 +67,25 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <SiteHeader />
-      <main className="flex-1">
-        <Outlet />
-      </main>
-      <SiteFooter />
+    <div className="relative flex min-h-screen flex-col bg-background overflow-hidden">
+      {/* Subtle side decorations */}
+      <div aria-hidden className="pointer-events-none fixed inset-y-0 left-0 z-0 hidden w-24 lg:block">
+        <div className="absolute left-0 top-1/4 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute left-0 bottom-1/4 h-96 w-96 -translate-x-1/2 rounded-full bg-[image:var(--gradient-primary)] opacity-[0.06] blur-3xl" />
+        <div className="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary/15 to-transparent" />
+      </div>
+      <div aria-hidden className="pointer-events-none fixed inset-y-0 right-0 z-0 hidden w-24 lg:block">
+        <div className="absolute right-0 top-1/3 h-80 w-80 translate-x-1/2 rounded-full bg-[image:var(--gradient-primary)] opacity-[0.06] blur-3xl" />
+        <div className="absolute right-0 bottom-10 h-72 w-72 translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute right-6 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary/15 to-transparent" />
+      </div>
+      <div className="relative z-10 flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </div>
     </div>
   );
 }
