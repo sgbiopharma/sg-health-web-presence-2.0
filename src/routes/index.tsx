@@ -139,7 +139,7 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: ShieldCheck, title: "FDA Licensed", text: "Fully licensed drug & device distributor." },
+              { icon: ShieldCheck, title: "FDA-Licensed", text: "Fully licensed drug & device distributor." },
               { icon: Award, title: "Quality Assured", text: "Globally trusted manufacturing partners." },
               { icon: Truck, title: "Nationwide Reach", text: "Reliable distribution across the Philippines." },
               { icon: HeartPulse, title: "Patient-First", text: "Affordability without compromise on care." },

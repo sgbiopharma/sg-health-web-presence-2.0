@@ -24,7 +24,7 @@ function AboutPage() {
             Revolutionizing healthcare accessibility — one community at a time.
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            SG Global Healthcare Corp is a rapidly expanding pharmaceutical and medical supply industry
+            SG Global Healthcare Corp is a rapidly expanding pharmaceutical and medical supply
             entity that operates as a dedicated wholesale distributor. With deep experience in
             pharmaceutical sales and marketing, we are committed to providing medicines of exceptional
             quality at affordable prices for every Filipino.
@@ -38,8 +38,12 @@ function AboutPage() {
             <img src={aboutImg} alt="Pharmaceutical vials" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Company Overview</h2>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Offerings</h2>
             <p className="mt-5 text-muted-foreground">
+              SG Global Healthcare Corp is committed to providing a comprehensive range of pharmaceutical
+              solutions, including branded and generic medications.
+            </p>
+            <p className="mt-4 text-muted-foreground">
               Our portfolio specializes in cardiology, nephrology, and internal medicine, sourced from
               reputable companies known for high manufacturing and importation standards. We prioritize
               quality and affordability so Filipinos can access the medicines they need to lead healthier
@@ -53,35 +57,38 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Our Offerings */}
-      <section className="bg-secondary/60 py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
+      {/* Mission · Vision · Core Values */}
+      <section className="relative overflow-hidden bg-secondary/60 py-16 md:py-24">
+        <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[image:var(--gradient-primary)] opacity-15 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 md:px-8">
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Offerings</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">What drives us forward</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What drives us</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Mission, Vision &amp; Core Values</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
                 icon: Target,
                 title: "Mission",
-                body: "To ensure every Filipino can access essential medicines for a healthier tomorrow — enhancing healthcare accessibility by delivering high-quality and affordable pharmaceutical solutions.",
+                body: "To revolutionize healthcare accessibility by delivering high-quality and affordable pharmaceutical solutions, ensuring that every Filipino has the means to access essential medicines for a healthier tomorrow.",
               },
               {
                 icon: Eye,
                 title: "Vision",
-                body: "To become the leading distribution company in the Philippines, renowned for our unwavering commitment to quality, affordability, and innovation — driving positive change in healthcare outcomes nationwide.",
+                body: "To emerge as the leading distribution company in the Philippines, renowned for our unwavering commitment to quality, affordability, and innovation, driving positive change in healthcare outcomes nationwide.",
               },
               {
                 icon: Heart,
                 title: "Core Values",
-                body: "Quality assurance, integrity, customer focus, innovation, and social responsibility. We prioritize safety, ethics, tailored solutions, progress, and community welfare.",
+                body: "Quality Assurance: We prioritize the safety and efficacy of our products. Integrity: We uphold the highest ethical standards in all our dealings. Customer Focus: We tailor our services to meet the unique needs of our clients. Innovation: We embrace progress and continually seek ways to improve. Social Responsibility: We are committed to giving back to the communities we serve.",
               },
             ].map((c) => (
               <article
                 key={c.title}
                 className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-soft)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
               >
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[image:var(--gradient-primary)] opacity-10 blur-2xl transition group-hover:opacity-25" />
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-soft)]">
                   <c.icon className="h-7 w-7" />
                 </div>
