@@ -21,7 +21,7 @@ export function SiteFooter() {
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/85">
             A trusted pharmaceutical and medical supply distributor committed to making quality healthcare
-            accessible and affordable across the Philippines and beyond.
+            accessible and affordable across the Philippines.
           </p>
         </div>
         <div>
