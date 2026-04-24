@@ -60,7 +60,7 @@ function HomePage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-soft)]" />
+        <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-soft)] opacity-80" />
         <div className="absolute -right-24 -top-24 -z-10 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 md:grid-cols-2 md:px-8 md:py-24">
           <div>
@@ -109,7 +109,7 @@ function HomePage() {
           </div>
           <div className="relative">
             <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[image:var(--gradient-primary)] opacity-20 blur-2xl" />
-            <div className="overflow-hidden rounded-[2rem] border border-primary/15 bg-card shadow-[var(--shadow-elegant)]">
+            <div className="overflow-hidden rounded-[2rem] border border-primary/15 bg-card/90 shadow-[var(--shadow-elegant)]">
               <img
                 src={heroImg}
                 alt="Pharmacist reviewing pharmaceutical products"
@@ -144,7 +144,7 @@ function HomePage() {
               { icon: Truck, title: "Nationwide Reach", text: "Reliable distribution across the Philippines." },
               { icon: HeartPulse, title: "Patient-First", text: "Affordability without compromise on care." },
             ].map((f) => (
-              <div key={f.title} className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)]">
+              <div key={f.title} className="rounded-2xl border border-border bg-card/80 p-5 shadow-[var(--shadow-soft)] backdrop-blur-sm transition hover:bg-card">
                 <f.icon className="h-7 w-7 text-primary" />
                 <h3 className="mt-3 text-sm font-bold text-foreground">{f.title}</h3>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{f.text}</p>
@@ -155,7 +155,7 @@ function HomePage() {
       </section>
 
       {/* Corporate Clients */}
-      <section className="bg-secondary/60 py-16 md:py-20">
+      <section className="bg-secondary/40 py-16 md:py-20 backdrop-blur-[2px]">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
@@ -173,7 +173,7 @@ function HomePage() {
             {clients.map((c) => (
               <article
                 key={c.name}
-                className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+                className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card/85 p-5 text-center shadow-sm backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-card hover:shadow-[var(--shadow-soft)]"
               >
                 <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-white p-2">
                   <img
