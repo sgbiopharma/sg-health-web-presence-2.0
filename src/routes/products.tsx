@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Pill, Stethoscope } from "lucide-react";
+import { Pill, Stethoscope, Syringe } from "lucide-react";
 import brandsImg from "@/assets/brands.jpg";
 import equipmentImg from "@/assets/equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
@@ -48,7 +48,7 @@ const equipment = [
   { name: "CT Scanners", desc: "High-resolution computed tomography imaging systems." },
   { name: "Ventilators", desc: "Critical-care ventilation for respiratory support." },
   { name: "ECG Machines", desc: "Diagnostic electrocardiography for cardiac assessment." },
-  { name: "Surgical Equipment", desc: "Reliable instruments for operating rooms." },
+  { name: "Surgical Equipment", desc: "Precision instruments and tools for operating room procedures." },
 ];
 
 const vaccineCategories: { name: string; types: string[] }[] = [
@@ -90,7 +90,7 @@ function ProductsPage() {
             A complete portfolio of trusted brands and advanced medical equipment.
           </h1>
           <p className="mt-5 max-w-2xl text-muted-foreground">
-            Every product is meticulously vetted for quality, safety, and regulatory compliance.
+            Every product meets stringent standards for quality, safety, and regulatory compliance.
           </p>
         </div>
       </section>
@@ -138,12 +138,18 @@ function ProductsPage() {
       </section>
 
       {/* Vaccines */}
-      <section className="bg-secondary/60 py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Vaccines</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Comprehensive immunization portfolio</h2>
+      <section className="relative overflow-hidden bg-secondary/60 py-16 md:py-20">
+        <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-[image:var(--gradient-primary)] opacity-15 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 md:px-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+              <Syringe className="h-6 w-6" />
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight">Vaccines</h2>
+          </div>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Meticulously selected vaccines covering viral infections, bacterial diseases, and preventable illnesses — sourced from globally renowned manufacturers.
+            Our immunization portfolio covers viral infections, bacterial diseases, and preventable illnesses — sourced from globally renowned manufacturers.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {vaccineCategories.map((v) => (
