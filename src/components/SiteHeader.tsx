@@ -7,7 +7,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/products", label: "Our Products" },
-  { to: "/contact", label: "Contact" },
+  { to: "/contact", label: "Contact Us" },
 ] as const;
 
 export function SiteHeader() {
