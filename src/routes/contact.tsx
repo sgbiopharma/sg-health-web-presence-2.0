@@ -47,7 +47,7 @@ function ContactPage() {
     // Compose mailto fallback so submissions reach the company immediately.
     const subject = encodeURIComponent(`Website inquiry from ${result.data.name}`);
     const body = encodeURIComponent(`${result.data.message}\n\n— ${result.data.name}\n${result.data.email}`);
-    window.location.href = `mailto:info@sgglobalhealthcare.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sgbiopharma.ph@gmail.com?subject=${subject}&body=${body}`;
     setTimeout(() => {
       setSent(true);
       setSubmitting(false);
@@ -75,7 +75,7 @@ function ContactPage() {
           <div className="space-y-4">
             {[
               { icon: Phone, title: "Phone", value: "0917 678 8808 · 0977 811 1186", href: "tel:+639176788808" },
-              { icon: Mail, title: "Email", value: "info@sgglobalhealthcare.com", href: "mailto:info@sgglobalhealthcare.com" },
+              { icon: Mail, title: "Email", value: "sgbiopharma.ph@gmail.com", href: "mailto:sgbiopharma.ph@gmail.com" },
               { icon: MapPin, title: "Office", value: "B6 L6 Fortuneville 1 Baliti, San Fernando, Pampanga, Philippines" },
             ].map((c) => (
               <a
