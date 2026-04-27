@@ -50,7 +50,7 @@ function AboutPage() {
               lives.
             </p>
             <p className="mt-4 text-muted-foreground">
-              At SG Global Healthcare, we take pride in our unwavering commitment to the health and
+              SG Global Healthcare takes pride in our unwavering commitment to the health and
               well-being of every customer we serve.
             </p>
           </div>
