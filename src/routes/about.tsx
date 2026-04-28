@@ -5,9 +5,9 @@ import aboutImg from "@/assets/about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — SG Global Healthcare Corp" },
-      { name: "description", content: "Learn about SG Global Healthcare Corp — our mission, vision, and core values driving quality healthcare distribution." },
-      { property: "og:title", content: "About SG Global Healthcare Corp" },
+      { title: "About Us — SG Global Healthcare" },
+      { name: "description", content: "Learn about SG Global Healthcare — our mission, vision, and core values driving quality healthcare distribution." },
+      { property: "og:title", content: "About SG Global Healthcare" },
       { property: "og:description", content: "Our mission, vision, and core values." },
     ],
   }),
@@ -19,12 +19,12 @@ function AboutPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">About us</p>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">WHO WE ARE</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Revolutionizing healthcare accessibility — one community at a time.
+            Revolutionizing healthcare accessibility, one community at a time.
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            SG Global Healthcare Corp is a rapidly expanding pharmaceutical and medical supply
+            SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply
             entity that operates as a dedicated wholesale distributor. With deep experience in
             pharmaceutical sales and marketing, we are committed to providing medicines of exceptional
             quality at affordable prices for every Filipino.
@@ -38,9 +38,8 @@ function AboutPage() {
             <img src={aboutImg} alt="Pharmaceutical vials" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Offerings</h2>
             <p className="mt-5 text-muted-foreground">
-              SG Global Healthcare Corp is committed to providing a comprehensive range of pharmaceutical
+              SG Global Healthcare is committed to providing a comprehensive range of pharmaceutical
               solutions, including branded and generic medications.
             </p>
             <p className="mt-4 text-muted-foreground">
