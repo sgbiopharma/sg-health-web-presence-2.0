@@ -208,7 +208,7 @@ function HomePage() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-primary-deep shadow-md hover:bg-white"
             >
-              Contact us today <ArrowRight className="h-4 w-4" />
+              CONTACT US TODAY <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
