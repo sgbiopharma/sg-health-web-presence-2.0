@@ -38,7 +38,7 @@ function AboutPage() {
             <img src={aboutImg} alt="Pharmaceutical vials" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Offerings</h2>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our offerings</h2>
             <p className="mt-5 text-muted-foreground">
               SG Global Healthcare is committed to providing a comprehensive range of pharmaceutical
               solutions, including branded and generic medications.
@@ -80,8 +80,8 @@ function AboutPage() {
               },
               {
                 icon: Heart,
-                title: "Core Values",
-                body: "Quality Assurance: We prioritize the safety and efficacy of our products. Integrity: We uphold the highest ethical standards in all our dealings. Customer Focus: We tailor our services to meet the unique needs of our clients. Innovation: We embrace progress and continually seek ways to improve. Social Responsibility: We are committed to giving back to the communities we serve.",
+                title: "Core values",
+                body: "Our values are quality assurance, integrity, customer focus, innovation, and social responsibility. We prioritize safety, ethics, tailored solutions, progress, and community welfare.",
               },
             ].map((c) => (
               <article
