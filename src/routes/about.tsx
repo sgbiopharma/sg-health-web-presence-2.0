@@ -38,6 +38,7 @@ function AboutPage() {
             <img src={aboutImg} alt="Pharmaceutical vials" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </div>
           <div>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Offerings</h2>
             <p className="mt-5 text-muted-foreground">
               SG Global Healthcare is committed to providing a comprehensive range of pharmaceutical
               solutions, including branded and generic medications.
@@ -63,7 +64,7 @@ function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4 md:px-8">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What drives us</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Mission, Vision &amp; Core Values</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Mission, vision, and core values</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
@@ -75,7 +76,7 @@ function AboutPage() {
               {
                 icon: Eye,
                 title: "Vision",
-                body: "To emerge as the leading distribution company in the Philippines, renowned for our unwavering commitment to quality, affordability, and innovation, driving positive change in healthcare outcomes nationwide.",
+                body: "To emerge as the leading distribution company in the Philippines, renowned for our unwavering commitment to quality, affordability, and innovation, and to drive positive change in healthcare outcomes nationwide.",
               },
               {
                 icon: Heart,
