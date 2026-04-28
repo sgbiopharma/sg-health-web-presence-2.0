@@ -24,9 +24,9 @@ import sercomLogo from "@/assets/clients/sercom.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SG Global Healthcare Corp — Quality Pharmaceuticals & Medical Equipment" },
+      { title: "SG Global Healthcare — Quality Pharmaceuticals & Medical Equipment" },
       { name: "description", content: "Trusted distributor of quality medicines, vaccines, and medical equipment. Delivering wellness, ensuring access nationwide." },
-      { property: "og:title", content: "SG Global Healthcare Corp" },
+      { property: "og:title", content: "SG Global Healthcare" },
       { property: "og:description", content: "Quality pharmaceuticals and medical equipment, distributed with integrity." },
     ],
   }),
@@ -74,7 +74,7 @@ function HomePage() {
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              SG Global Healthcare Corp is a trusted wholesale distributor of pharmaceutical products,
+              SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
               vaccines, and advanced medical equipment — sourced from world-class manufacturers and
               delivered with integrity.
             </p>
@@ -83,13 +83,13 @@ function HomePage() {
                 to="/products"
                 className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:scale-[1.02]"
               >
-                Explore our products <ArrowRight className="h-4 w-4" />
+                EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center rounded-full border border-primary/30 bg-background px-6 py-3 text-sm font-semibold text-primary-deep hover:bg-secondary"
               >
-                Learn more about us
+                LEARN MORE ABOUT US
               </Link>
             </div>
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6">
@@ -131,7 +131,7 @@ function HomePage() {
               A pharmaceutical distributor built on trust and accessibility.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              SG Global Healthcare Corp is a rapidly expanding pharmaceutical and medical supply entity
+              SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply entity
               dedicated to wholesale distribution. We leverage extensive experience in pharmaceutical sales
               and marketing to revolutionize healthcare accessibility — providing medicines of exceptional
               quality at affordable prices.
@@ -139,10 +139,10 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: ShieldCheck, title: "FDA-Licensed", text: "Fully licensed drug & device distributor." },
-              { icon: Award, title: "Quality Assured", text: "Globally trusted manufacturing partners." },
-              { icon: Truck, title: "Nationwide Reach", text: "Reliable distribution across the Philippines." },
-              { icon: HeartPulse, title: "Patient-First", text: "Affordability without compromise on care." },
+              { icon: ShieldCheck, title: "FDA-LICENSED", text: "Fully licensed drug & device distributor." },
+              { icon: Award, title: "QUALITY ASSURED", text: "Globally trusted manufacturing partners." },
+              { icon: Truck, title: "NATIONWIDE REACH", text: "Reliable distribution across the Philippines." },
+              { icon: HeartPulse, title: "PATIENT-FIRST", text: "Affordability without compromise on care." },
             ].map((f) => (
               <div key={f.title} className="rounded-2xl border border-border bg-card/80 p-5 shadow-[var(--shadow-soft)] backdrop-blur-sm transition hover:bg-card">
                 <f.icon className="h-7 w-7 text-primary" />

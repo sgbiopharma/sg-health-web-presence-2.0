@@ -38,13 +38,13 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/90">
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><span>0917 678 8808 · 0977 811 1186</span></li>
             <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><span>sgbiopharma.ph@gmail.com</span></li>
-            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>B6 L6 Fortuneville 1 Baliti, San Fernando, Pampanga</span></li>
+            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>B6 L6 Sapphire St., Fortuneville 1, Baliti, San Fernando, Pampanga, Philippines 2000</span></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/15">
         <div className="mx-auto max-w-7xl px-4 py-5 text-xs text-primary-foreground/80 md:px-8">
-          © {new Date().getFullYear()} SG Global Healthcare Corp. All rights reserved.
+          © {new Date().getFullYear()} SG Global Healthcare. All rights reserved.
         </div>
       </div>
     </footer>

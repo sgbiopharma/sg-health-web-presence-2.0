@@ -6,9 +6,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — SG Global Healthcare Corp" },
-      { name: "description", content: "Get in touch with SG Global Healthcare Corp for pharmaceutical and medical equipment inquiries." },
-      { property: "og:title", content: "Contact SG Global Healthcare Corp" },
+      { title: "Contact Us — SG Global Healthcare" },
+      { name: "description", content: "Get in touch with SG Global Healthcare for pharmaceutical and medical equipment inquiries." },
+      { property: "og:title", content: "Contact SG Global Healthcare" },
       { property: "og:description", content: "Reach out for pharmaceutical and medical equipment inquiries." },
     ],
   }),
@@ -76,7 +76,7 @@ function ContactPage() {
             {[
               { icon: Phone, title: "Phone", value: "0917 678 8808 · 0977 811 1186", href: "tel:+639176788808" },
               { icon: Mail, title: "Email", value: "sgbiopharma.ph@gmail.com", href: "mailto:sgbiopharma.ph@gmail.com" },
-              { icon: MapPin, title: "Office", value: "B6 L6 Fortuneville 1 Baliti, San Fernando, Pampanga, Philippines" },
+              { icon: MapPin, title: "Office", value: "B6 L6 Sapphire St., Fortuneville 1, Baliti, San Fernando, Pampanga, Philippines 2000" },
             ].map((c) => (
               <a
                 key={c.title}

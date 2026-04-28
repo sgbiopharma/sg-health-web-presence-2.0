@@ -18,9 +18,9 @@ import nelpaLogo from "@/assets/brands/nelpa.jpg";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Our Products — SG Global Healthcare Corp" },
+      { title: "Our Products — SG Global Healthcare" },
       { name: "description", content: "Explore our pharmaceutical brands, vaccines, and advanced medical equipment portfolio." },
-      { property: "og:title", content: "Our Products — SG Global Healthcare Corp" },
+      { property: "og:title", content: "Our Products — SG Global Healthcare" },
       { property: "og:description", content: "Trusted brands and advanced medical equipment." },
     ],
   }),
@@ -43,12 +43,12 @@ const brands = [
 ];
 
 const equipment = [
-  { name: "Patient Monitors", desc: "Multi-parameter monitoring for ICU and general wards." },
+  { name: "Patient monitors", desc: "Multi-parameter monitoring for ICU and general wards." },
   { name: "Defibrillators", desc: "Automated external defibrillators for emergency response." },
   { name: "CT Scanners", desc: "High-resolution computed tomography imaging systems." },
   { name: "Ventilators", desc: "Critical-care ventilation for respiratory support." },
-  { name: "ECG Machines", desc: "Diagnostic electrocardiography for cardiac assessment." },
-  { name: "Surgical Equipment", desc: "Precision instruments and tools for operating room procedures." },
+  { name: "ECG machines", desc: "Diagnostic electrocardiography for cardiac assessment." },
+  { name: "Surgical equipment", desc: "Precision instruments and tools for operating room procedures." },
 ];
 
 const vaccineCategories: { name: string; types: string[] }[] = [
@@ -149,7 +149,7 @@ function ProductsPage() {
             <h2 className="text-3xl font-bold tracking-tight">Vaccines</h2>
           </div>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Our immunization portfolio covers viral infections, bacterial diseases, and preventable illnesses — sourced from globally renowned manufacturers.
+            Our immunization portfolio covers viral infections, bacterial diseases, and preventable illnesses. All sourced from globally renowned manufacturers.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {vaccineCategories.map((v) => (
@@ -182,11 +182,10 @@ function ProductsPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
                 <Stethoscope className="h-6 w-6" />
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">Medical Equipment</h2>
+              <h2 className="text-3xl font-bold tracking-tight">Medical equipment</h2>
             </div>
             <p className="mt-4 text-muted-foreground">
-              Advanced medical equipment solutions to enhance healthcare accessibility and outcomes —
-              from diagnostic tools and patient monitoring systems to surgical equipment and rehabilitation aids.
+              Advanced medical equipment solutions to enhance healthcare accessibility and outcomes. From diagnostic tools and patient monitoring systems to surgical equipment and rehabilitation aids.
             </p>
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               {equipment.map((e) => (
