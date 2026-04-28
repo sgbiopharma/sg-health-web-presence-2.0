@@ -45,7 +45,7 @@ const brands = [
 const equipment = [
   { name: "Patient monitors", desc: "Multi-parameter monitoring for ICU and general wards." },
   { name: "Defibrillators", desc: "Automated external defibrillators for emergency response." },
-  { name: "CT Scanners", desc: "High-resolution computed tomography imaging systems." },
+  { name: "CT scanners", desc: "High-resolution computed tomography imaging systems." },
   { name: "Ventilators", desc: "Critical-care ventilation for respiratory support." },
   { name: "ECG machines", desc: "Diagnostic electrocardiography for cardiac assessment." },
   { name: "Surgical equipment", desc: "Precision instruments and tools for operating room procedures." },

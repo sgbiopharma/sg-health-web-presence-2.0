@@ -74,9 +74,9 @@ function ContactPage() {
           {/* Details */}
           <div className="space-y-4">
             {[
-              { icon: Phone, title: "Phone", value: "0917 678 8808 · 0977 811 1186", href: "tel:+639176788808" },
+              { icon: Phone, title: "Phone", value: "0917-6788-808     |     0977-811-1186", href: "tel:+639176788808" },
               { icon: Mail, title: "Email", value: "sgbiopharma.ph@gmail.com", href: "mailto:sgbiopharma.ph@gmail.com" },
-              { icon: MapPin, title: "Office", value: "B6 L6 Sapphire St., Fortuneville 1, Baliti, San Fernando, Pampanga, Philippines 2000" },
+              { icon: MapPin, title: "Office", value: "B6 L6 Sapphire St., Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000" },
             ].map((c) => (
               <a
                 key={c.title}
@@ -88,7 +88,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-widest text-primary">{c.title}</div>
-                  <div className="mt-1 text-sm font-medium text-foreground">{c.value}</div>
+                  <div className="mt-1 whitespace-pre-line text-sm font-medium text-foreground">{c.value}</div>
                 </div>
               </a>
             ))}

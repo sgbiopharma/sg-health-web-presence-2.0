@@ -75,7 +75,7 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-              vaccines, and advanced medical equipment — sourced from world-class manufacturers and
+              vaccines, and advanced medical equipment sourced from world-class manufacturers and
               delivered with integrity.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -131,10 +131,10 @@ function HomePage() {
               A pharmaceutical distributor built on trust and accessibility.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply entity
+              SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply company
               dedicated to wholesale distribution. We leverage extensive experience in pharmaceutical sales
-              and marketing to revolutionize healthcare accessibility — providing medicines of exceptional
-              quality at affordable prices.
+              and marketing to revolutionize healthcare accessibility. Our mission is to provide medicines
+              of exceptional quality at affordable prices.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
