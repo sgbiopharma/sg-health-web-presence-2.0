@@ -26,6 +26,7 @@ function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   function update<K extends keyof typeof form>(k: K, v: string) {
     setForm((f) => ({ ...f, [k]: v }));
@@ -44,15 +45,28 @@ function ContactPage() {
       return;
     }
     setSubmitting(true);
-    // Compose mailto fallback so submissions reach the company immediately.
-    const subject = encodeURIComponent(`Website inquiry from ${result.data.name}`);
-    const body = encodeURIComponent(`${result.data.message}\n\n— ${result.data.name}\n${result.data.email}`);
-    window.location.href = `mailto:sgbiopharma.ph@gmail.com?subject=${subject}&body=${body}`;
-    setTimeout(() => {
+    setSubmitError("");
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwEY-sTeu0J5Ugy0S2j4yWAmc7ic475QvTEOhEd_xixRYYPOyQjHqVEMisHumPsciV-HA/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: result.data.name,
+            email: result.data.email,
+            message: result.data.message,
+          }),
+        },
+      );
       setSent(true);
-      setSubmitting(false);
       setForm({ name: "", email: "", message: "" });
-    }, 400);
+    } catch {
+      setSubmitError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -106,10 +120,7 @@ function ContactPage() {
             {sent ? (
               <div className="flex flex-col items-center py-12 text-center">
                 <CheckCircle2 className="h-14 w-14 text-primary" />
-                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Message ready to send!</h3>
-                <p className="mt-2 max-w-md text-sm text-muted-foreground">
-                  We've opened your email client with the message pre-filled. Send it to reach our team — we'll respond within 1 business day.
-                </p>
+                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Thank you! Your message has been sent.</h3>
                 <button
                   type="button"
                   onClick={() => setSent(false)}
@@ -160,6 +171,9 @@ function ContactPage() {
                   >
                     {submitting ? "Sending…" : (<>Send message <Send className="h-4 w-4" /></>)}
                   </button>
+                  {submitError && (
+                    <p className="text-center text-sm font-medium text-destructive">{submitError}</p>
+                  )}
                 </div>
               </>
             )}
