@@ -132,7 +132,7 @@ function ContactPage() {
             ) : (
               <>
                 <h2 className="text-2xl font-bold tracking-tight">Send us a message</h2>
-                <p className="mt-2 text-sm text-muted-foreground">Fill in the form and we'll be in touch.</p>
+                <p className="mt-2 text-sm text-muted-foreground">Fill in the form, and we'll be in touch.</p>
                 <div className="mt-6 space-y-5">
                   <Field label="Name" error={errors.name}>
                     <input
