@@ -160,19 +160,43 @@ function ProductsPage() {
             {vaccineCategories.map((v) => (
               <article
                 key={v.name}
-                className="rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+                onMouseEnter={() => setOpenVaccine(v.name)}
+                onMouseLeave={() => setOpenVaccine((cur) => (cur === v.name ? null : cur))}
+                className="group rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
               >
-                <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary-deep">
-                  {v.name}
-                </h3>
-                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-                  {v.types.map((t) => (
-                    <li key={t} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenVaccine((cur) => (cur === v.name ? null : v.name))
+                  }
+                  aria-expanded={openVaccine === v.name}
+                  className="flex w-full items-center justify-between gap-3 p-5 text-left"
+                >
+                  <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary-deep">
+                    {v.name}
+                  </h3>
+                  <ChevronDown
+                    className={`h-4 w-4 shrink-0 text-primary transition-transform ${
+                      openVaccine === v.name ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`grid overflow-hidden px-5 transition-all duration-300 ${
+                    openVaccine === v.name
+                      ? "grid-rows-[1fr] pb-5 opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <ul className="min-h-0 space-y-1.5 text-sm text-muted-foreground">
+                    {v.types.map((t) => (
+                      <li key={t} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             ))}
           </div>
