@@ -59,43 +59,39 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-primary-deep text-primary-foreground">
-        {/* Background image on the right, fading into deep color on the left */}
+      <section className="relative isolate overflow-hidden text-primary-foreground">
         <div className="absolute inset-0 -z-10">
           <img
             src={heroImg}
             alt="Pharmacist reviewing pharmaceutical products"
-            className="h-full w-full object-cover object-right"
+            className="h-full w-full object-cover object-center"
           />
-          {/* Curved/feathered overlay blending image into the deep panel */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(120% 140% at 0% 50%, var(--primary-deep) 38%, color-mix(in oklab, var(--primary-deep) 85%, transparent) 55%, transparent 78%)",
-            }}
-          />
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-[image:var(--gradient-primary)] opacity-40 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-primary-deep/70" />
+          <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-40 mix-blend-multiply" />
         </div>
 
-        <div className="mx-auto flex min-h-[460px] max-w-7xl items-center px-4 py-20 md:min-h-[560px] md:px-8 md:py-28">
-          <div className="max-w-xl">
-            <h1 className="text-4xl font-extrabold italic leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
-              Quality healthcare,
-              <span className="block">accessible to every Filipino.</span>
-            </h1>
-            <p className="mt-5 max-w-lg text-base leading-relaxed text-primary-foreground/85 md:text-lg">
-              SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-              vaccines, and advanced medical equipment — delivered with integrity.
-            </p>
-            <div className="mt-8">
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 border border-primary-foreground/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary-deep"
-              >
-                EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+        <div className="mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center px-4 py-24 text-center md:min-h-[620px] md:px-8 md:py-32">
+          <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
+            Quality healthcare,
+            <span className="block">accessible to every Filipino.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
+            SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
+            vaccines, and advanced medical equipment — delivered with integrity.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-primary-deep shadow-md transition hover:bg-white"
+            >
+              EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/80 px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground hover:text-primary-deep"
+            >
+              LEARN MORE ABOUT US
+            </Link>
           </div>
         </div>
       </section>
