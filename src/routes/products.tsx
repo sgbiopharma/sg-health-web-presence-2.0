@@ -125,12 +125,12 @@ function ProductsPage() {
                   key={b.name}
                   className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
                 >
-                  <div className="flex h-16 items-center justify-center rounded-lg bg-white p-2">
+                  <div className="flex h-28 items-center justify-center rounded-lg bg-white p-3">
                     <img
                       src={b.logo}
                       alt={`${b.name} logo`}
-                      width={200}
-                      height={120}
+                      width={280}
+                      height={180}
                       loading="lazy"
                       className="max-h-full max-w-full object-contain"
                     />
