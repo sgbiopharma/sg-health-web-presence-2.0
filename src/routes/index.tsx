@@ -59,64 +59,42 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-soft)] opacity-80" />
-        <div className="absolute -right-24 -top-24 -z-10 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 md:grid-cols-2 md:px-8 md:py-24">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary-deep">
-              <HeartPulse className="h-3.5 w-3.5" /> Delivering wellness, ensuring access
-            </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-6xl">
+      <section className="relative isolate overflow-hidden bg-primary-deep text-primary-foreground">
+        {/* Background image on the right, fading into deep color on the left */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={heroImg}
+            alt="Pharmacist reviewing pharmaceutical products"
+            className="h-full w-full object-cover object-right"
+          />
+          {/* Curved/feathered overlay blending image into the deep panel */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(120% 140% at 0% 50%, var(--primary-deep) 38%, color-mix(in oklab, var(--primary-deep) 85%, transparent) 55%, transparent 78%)",
+            }}
+          />
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-[image:var(--gradient-primary)] opacity-40 mix-blend-multiply" />
+        </div>
+
+        <div className="mx-auto flex min-h-[460px] max-w-7xl items-center px-4 py-20 md:min-h-[560px] md:px-8 md:py-28">
+          <div className="max-w-xl">
+            <h1 className="text-4xl font-extrabold italic leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
               Quality healthcare,
-              <span className="block bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">
-                accessible to every Filipino.
-              </span>
+              <span className="block">accessible to every Filipino.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-primary-foreground/85 md:text-lg">
               SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-              vaccines, and advanced medical equipment sourced from world-class manufacturers and
-              delivered with integrity.
+              vaccines, and advanced medical equipment — delivered with integrity.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 border border-primary-foreground/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary-deep"
               >
                 EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center rounded-full border border-primary/30 bg-background px-6 py-3 text-sm font-semibold text-primary-deep hover:bg-secondary"
-              >
-                LEARN MORE ABOUT US
-              </Link>
-            </div>
-            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6">
-              <div>
-                <dt className="text-3xl font-extrabold text-primary-deep">50+</dt>
-                <dd className="text-xs uppercase tracking-wider text-muted-foreground">Products</dd>
-              </div>
-              <div>
-                <dt className="text-3xl font-extrabold text-primary-deep">10+</dt>
-                <dd className="text-xs uppercase tracking-wider text-muted-foreground">Partner brands</dd>
-              </div>
-              <div>
-                <dt className="text-3xl font-extrabold text-primary-deep">100%</dt>
-                <dd className="text-xs uppercase tracking-wider text-muted-foreground">FDA compliant</dd>
-              </div>
-            </dl>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[image:var(--gradient-primary)] opacity-20 blur-2xl" />
-            <div className="overflow-hidden rounded-[2rem] border border-primary/15 bg-card/90 shadow-[var(--shadow-elegant)]">
-              <img
-                src={heroImg}
-                alt="Pharmacist reviewing pharmaceutical products"
-                width={1600}
-                height={1024}
-                className="aspect-[5/4] w-full object-cover"
-              />
             </div>
           </div>
         </div>
