@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-pharma.jpg";
+import heroImg from "@/assets/hero-tubes.jpg";
+import ctaBgImg from "@/assets/cta-vaccines.png";
 import cdcLogo from "@/assets/clients/cdc.jpg";
 import ciacLogo from "@/assets/clients/ciac.jpg";
 import citemLogo from "@/assets/clients/citem.jpg";
@@ -63,11 +64,11 @@ function HomePage() {
         <div className="absolute inset-0 -z-10">
           <img
             src={heroImg}
-            alt="Pharmacist reviewing pharmaceutical products"
+            alt="Medical sample collection tubes distributed by SG Global Healthcare"
             className="h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-primary-deep/70" />
-          <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-40 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-primary-deep/35" />
+          <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-20 mix-blend-multiply" />
         </div>
 
         <div className="mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center px-4 py-24 text-center md:min-h-[620px] md:px-8 md:py-32">
@@ -77,7 +78,7 @@ function HomePage() {
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
             SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-            vaccines, and advanced medical equipment — delivered with integrity.
+            vaccines, and advanced medical equipment sourced from world-class manufacturers and delivered with integrity.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
@@ -168,8 +169,15 @@ function HomePage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-8">
-        <div className="overflow-hidden rounded-3xl bg-[image:var(--gradient-primary)] p-10 text-primary-foreground shadow-[var(--shadow-elegant)] md:p-14">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div
+          className="relative overflow-hidden rounded-3xl p-10 text-primary-foreground shadow-[var(--shadow-elegant)] md:p-14"
+          style={{
+            backgroundImage: `linear-gradient(135deg, color-mix(in oklab, var(--primary-deep) 80%, transparent), color-mix(in oklab, var(--primary) 65%, transparent)), url(${ctaBgImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
                 Partner with us to deliver better healthcare.

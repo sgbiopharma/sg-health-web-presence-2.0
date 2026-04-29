@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Pill, Stethoscope, Syringe } from "lucide-react";
-import brandsImg from "@/assets/brands.jpg";
+import { Pill, Stethoscope, Syringe, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import brandsImg from "@/assets/brands-tubes.png";
 import equipmentImg from "@/assets/equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
 import sdBiosensorLogo from "@/assets/brands/sd-biosensor.jpg";
@@ -81,38 +82,44 @@ const vaccineCategories: { name: string; types: string[] }[] = [
 ];
 
 function ProductsPage() {
+  const [openVaccine, setOpenVaccine] = useState<string | null>(null);
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
-        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            A complete portfolio of trusted brands and advanced medical equipment.
-          </h1>
-          <p className="mt-5 max-w-2xl text-muted-foreground">
-            Every product meets stringent standards for quality, safety, and regulatory compliance.
-          </p>
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:px-8 md:py-20">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
+            <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
+              A complete portfolio of trusted brands and advanced medical equipment.
+            </h1>
+            <p className="mt-5 max-w-xl text-muted-foreground">
+              Every product meets stringent standards for quality, safety, and regulatory compliance.
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={brandsImg}
+              alt="SG Care branded sample collection tubes"
+              className="w-full max-w-md object-contain"
+              loading="eager"
+            />
+          </div>
         </div>
       </section>
 
       {/* Brands */}
       <section id="brands" className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-8 md:grid-cols-[1.2fr_2fr] md:items-start">
-          <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
-            <img src={brandsImg} alt="Pharmaceutical brands on shelves" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+            <Pill className="h-6 w-6" />
           </div>
-          <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
-                <Pill className="h-6 w-6" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight">Brands</h2>
-            </div>
-            <p className="mt-4 text-muted-foreground">
+          <h2 className="text-3xl font-bold tracking-tight">Brands</h2>
+        </div>
+        <p className="mt-4 max-w-3xl text-muted-foreground">
               Our portfolio includes reliable brands across diverse therapeutic areas. Each brand undergoes
               meticulous vetting to ensure alignment with our values of safety and excellence.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {brands.map((b) => (
                 <article
                   key={b.name}
@@ -133,8 +140,6 @@ function ProductsPage() {
                 </article>
               ))}
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Vaccines */}
@@ -155,19 +160,43 @@ function ProductsPage() {
             {vaccineCategories.map((v) => (
               <article
                 key={v.name}
-                className="rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+                onMouseEnter={() => setOpenVaccine(v.name)}
+                onMouseLeave={() => setOpenVaccine((cur) => (cur === v.name ? null : cur))}
+                className="group rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
               >
-                <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary-deep">
-                  {v.name}
-                </h3>
-                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-                  {v.types.map((t) => (
-                    <li key={t} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenVaccine((cur) => (cur === v.name ? null : v.name))
+                  }
+                  aria-expanded={openVaccine === v.name}
+                  className="flex w-full items-center justify-between gap-3 p-5 text-left"
+                >
+                  <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary-deep">
+                    {v.name}
+                  </h3>
+                  <ChevronDown
+                    className={`h-4 w-4 shrink-0 text-primary transition-transform ${
+                      openVaccine === v.name ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`grid overflow-hidden px-5 transition-all duration-300 ${
+                    openVaccine === v.name
+                      ? "grid-rows-[1fr] pb-5 opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <ul className="min-h-0 space-y-1.5 text-sm text-muted-foreground">
+                    {v.types.map((t) => (
+                      <li key={t} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             ))}
           </div>
