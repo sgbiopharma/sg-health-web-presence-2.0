@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight, Leaf } from "lucide-react";
+import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-tubes.jpg";
 import ctaBgImg from "@/assets/cta-vaccines.png";
 import cdcLogo from "@/assets/clients/cdc.jpg";
@@ -60,59 +60,39 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate overflow-hidden text-primary-foreground">
         <div className="absolute inset-0 -z-10">
           <img
             src={heroImg}
-            alt="SG Care branded medical sample collection tubes"
+            alt="Medical sample collection tubes distributed by SG Global Healthcare"
             className="h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-primary-deep/35" />
+          <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-20 mix-blend-multiply" />
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-deep">
-              <Leaf className="h-3.5 w-3.5" /> Delivering Wellness, Ensuring Access
-            </span>
-            <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-              Quality healthcare,{" "}
-              <span className="text-primary">accessible to every Filipino.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              SG Global Healthcare Corp is a trusted wholesale distributor of pharmaceutical products,
-              vaccines, and advanced medical equipment — sourced from world-class manufacturers and
-              delivered with integrity.
-            </p>
-            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition hover:bg-primary-deep"
-              >
-                Explore our products <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-background"
-              >
-                Learn more about us
-              </Link>
-            </div>
-
-            <div className="mt-12 grid max-w-xl grid-cols-3 gap-6">
-              {[
-                { value: "50+", label: "Products" },
-                { value: "10+", label: "Partner Brands" },
-                { value: "100%", label: "FDA Compliant" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="text-3xl font-extrabold text-primary md:text-4xl">{s.value}</div>
-                  <div className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center px-4 py-24 text-center md:min-h-[620px] md:px-8 md:py-32">
+          <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
+            Quality healthcare,
+            <span className="block">accessible to every Filipino.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
+            SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
+            vaccines, and advanced medical equipment sourced from world-class manufacturers and delivered with integrity.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-primary-deep shadow-md transition hover:bg-white"
+            >
+              EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/80 px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground hover:text-primary-deep"
+            >
+              LEARN MORE ABOUT US
+            </Link>
           </div>
         </div>
       </section>
