@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Pill, Stethoscope, Syringe } from "lucide-react";
-import brandsImg from "@/assets/brands.jpg";
+import { Pill, Stethoscope, Syringe, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import brandsImg from "@/assets/brands-tubes.png";
 import equipmentImg from "@/assets/equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
 import sdBiosensorLogo from "@/assets/brands/sd-biosensor.jpg";
@@ -97,22 +98,17 @@ function ProductsPage() {
 
       {/* Brands */}
       <section id="brands" className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-8 md:grid-cols-[1.2fr_2fr] md:items-start">
-          <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
-            <img src={brandsImg} alt="Pharmaceutical brands on shelves" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+            <Pill className="h-6 w-6" />
           </div>
-          <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
-                <Pill className="h-6 w-6" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight">Brands</h2>
-            </div>
-            <p className="mt-4 text-muted-foreground">
+          <h2 className="text-3xl font-bold tracking-tight">Brands</h2>
+        </div>
+        <p className="mt-4 max-w-3xl text-muted-foreground">
               Our portfolio includes reliable brands across diverse therapeutic areas. Each brand undergoes
               meticulous vetting to ensure alignment with our values of safety and excellence.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {brands.map((b) => (
                 <article
                   key={b.name}
@@ -133,8 +129,6 @@ function ProductsPage() {
                 </article>
               ))}
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Vaccines */}
