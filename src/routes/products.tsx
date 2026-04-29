@@ -82,6 +82,7 @@ const vaccineCategories: { name: string; types: string[] }[] = [
 ];
 
 function ProductsPage() {
+  const [openVaccine, setOpenVaccine] = useState<string | null>(null);
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
