@@ -58,7 +58,7 @@ function AboutPage() {
       </section>
 
       {/* Mission · Vision · Core Values */}
-      <section className="relative overflow-hidden bg-secondary/60 py-16 md:py-24">
+      <section className="relative overflow-hidden bg-secondary/60 py-14 md:py-16">
         <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[image:var(--gradient-primary)] opacity-15 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-8">
