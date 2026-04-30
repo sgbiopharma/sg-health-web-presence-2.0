@@ -73,7 +73,7 @@ function ContactPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Contact us</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Contact us</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
             Let's deliver better healthcare, together.
           </h1>

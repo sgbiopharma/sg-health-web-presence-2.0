@@ -99,34 +99,34 @@ function HomePage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Floating stats card */}
-        <div className="relative z-10 mx-auto -mt-10 max-w-5xl px-4 pb-16 md:-mt-16 md:px-8 md:pb-20">
-          <div
-            className="rounded-2xl bg-white p-8 md:p-12"
-            style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-          >
-            <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-3">
-              {[
-                { num: "50+", label: "Products" },
-                { num: "10+", label: "Partner Brands" },
-                { num: "100%", label: "FDA Compliant" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="text-4xl font-extrabold text-primary-deep md:text-5xl">{s.num}</div>
-                  <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* Floating stats card — between hero and intro */}
+      <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
+        <div
+          className="-mt-12 rounded-2xl bg-white p-10 md:-mt-20 md:p-14"
+          style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+        >
+          <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3">
+            {[
+              { num: "50+", label: "Products" },
+              { num: "10+", label: "Partner Brands" },
+              { num: "100%", label: "FDA Compliant" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-5xl font-extrabold text-primary-deep md:text-6xl">{s.num}</div>
+                <div className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground md:text-base">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Intro */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Who we are</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Who we are</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
               A pharmaceutical distributor built on trust and accessibility.
             </h2>
@@ -159,7 +159,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Corporate Clients</p>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Corporate Clients</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
                 Trusted by leading institutions nationwide.
               </h2>
