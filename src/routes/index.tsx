@@ -102,20 +102,20 @@ function HomePage() {
       </section>
 
       {/* Floating stats card — between hero and intro */}
-      <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 md:px-8">
         <div
-          className="-mt-12 rounded-2xl bg-white p-10 md:-mt-20 md:p-14"
+          className="-mt-10 rounded-2xl bg-white p-6 md:-mt-14 md:p-8"
           style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
         >
-          <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-3">
             {[
               { num: "50+", label: "Products" },
               { num: "10+", label: "Partner Brands" },
               { num: "100%", label: "FDA Compliant" },
             ].map((s) => (
               <div key={s.label}>
-                <div className="text-5xl font-extrabold text-primary-deep md:text-6xl">{s.num}</div>
-                <div className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground md:text-base">{s.label}</div>
+                <div className="text-4xl font-extrabold leading-[1.05] tracking-tight text-primary-deep md:text-5xl lg:text-6xl">{s.num}</div>
+                <div className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
               </div>
             ))}
           </div>
