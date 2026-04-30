@@ -96,9 +96,9 @@ function ProductsPage() {
           <div className="md:col-span-3">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
             <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
-              A complete portfolio of trusted
-              <span className="block">brands and advanced medical</span>
-              <span className="block">equipment.</span>
+              A complete portfolio of
+              <span className="block">trusted brands and advanced</span>
+              <span className="block">medical equipment.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-muted-foreground">
               Every product meets stringent standards for quality, safety, and regulatory compliance.
