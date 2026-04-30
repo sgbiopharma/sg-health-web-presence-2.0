@@ -19,7 +19,7 @@ function AboutPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">WHO WE ARE</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">WHO WE ARE</p>
           <h1 className="mt-3 text-4xl font-extrabold leading-[1.15] tracking-tight md:text-5xl">
             Revolutionizing healthcare accessibility,
             <span className="block">one community at a time.</span>
@@ -64,7 +64,7 @@ function AboutPage() {
         <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[image:var(--gradient-primary)] opacity-15 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-8">
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What drives us</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">What drives us</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Mission, vision, and core values</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">

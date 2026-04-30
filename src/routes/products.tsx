@@ -94,11 +94,11 @@ function ProductsPage() {
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-5 md:px-8 md:py-20">
           <div className="md:col-span-3">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
             <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
-              A complete portfolio
-              <span className="block">of trusted brands and</span>
-              <span className="block">advanced medical equipment.</span>
+              A complete portfolio of
+              <span className="block">trusted brands and advanced</span>
+              <span className="block">medical equipment.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-muted-foreground">
               Every product meets stringent standards for quality, safety, and regulatory compliance.
@@ -164,7 +164,7 @@ function ProductsPage() {
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Our immunization portfolio covers viral infections, bacterial diseases, and preventable illnesses. All sourced from globally renowned manufacturers.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {vaccineCategories.map((v) => (
               <article
                 key={v.name}
