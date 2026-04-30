@@ -2,7 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Pill, Stethoscope, Syringe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import brandsImg from "@/assets/brands-tubes.png";
-import equipmentImg from "@/assets/equipment.jpg";
+import patientMonitorsImg from "@/assets/equipment/Patient_monitors.jpg";
+import defibrillatorsImg from "@/assets/equipment/Defibrillators.jpg";
+import ctScannersImg from "@/assets/equipment/CT_scanners.jpg";
+import ventilatorsImg from "@/assets/equipment/Ventilators.jpg";
+import ecgMachinesImg from "@/assets/equipment/ECG_machines.jpg";
+import surgicalEquipmentImg from "@/assets/equipment/Surgical_equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
 import sdBiosensorLogo from "@/assets/brands/sd-biosensor.jpg";
 import wondfoLogo from "@/assets/brands/wondfo.jpg";
@@ -44,12 +49,12 @@ const brands = [
 ];
 
 const equipment = [
-  { name: "Patient monitors", desc: "Multi-parameter monitoring for ICU and general wards." },
-  { name: "Defibrillators", desc: "Automated external defibrillators for emergency response." },
-  { name: "CT scanners", desc: "High-resolution computed tomography imaging systems." },
-  { name: "Ventilators", desc: "Critical-care ventilation for respiratory support." },
-  { name: "ECG machines", desc: "Diagnostic electrocardiography for cardiac assessment." },
-  { name: "Surgical equipment", desc: "Precision instruments and tools for operating room procedures." },
+  { name: "Patient monitors", desc: "Multi-parameter monitoring for ICU and general wards.", image: patientMonitorsImg },
+  { name: "Defibrillators", desc: "Automated external defibrillators for emergency response.", image: defibrillatorsImg },
+  { name: "CT scanners", desc: "High-resolution computed tomography imaging systems.", image: ctScannersImg },
+  { name: "Ventilators", desc: "Critical-care ventilation for respiratory support.", image: ventilatorsImg },
+  { name: "ECG machines", desc: "Diagnostic electrocardiography for cardiac assessment.", image: ecgMachinesImg },
+  { name: "Surgical equipment", desc: "Precision instruments and tools for operating room procedures.", image: surgicalEquipmentImg },
 ];
 
 const vaccineCategories: { name: string; types: string[] }[] = [
@@ -83,6 +88,7 @@ const vaccineCategories: { name: string; types: string[] }[] = [
 
 function ProductsPage() {
   const [openVaccine, setOpenVaccine] = useState<string | null>(null);
+  const [openEquipment, setOpenEquipment] = useState<string | null>(null);
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
@@ -163,7 +169,7 @@ function ProductsPage() {
               <article
                 key={v.name}
                 onMouseEnter={() => setOpenVaccine(v.name)}
-                onMouseLeave={() => setOpenVaccine((cur) => (cur === v.name ? null : cur))}
+                onMouseLeave={() => setOpenVaccine(null)}
                 className="group rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
               >
                 <button
@@ -207,32 +213,49 @@ function ProductsPage() {
 
       {/* Medical Equipment */}
       <section id="equipment" className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-8 md:grid-cols-[2fr_1.2fr] md:items-start">
-          <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
-                <Stethoscope className="h-6 w-6" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight">Medical equipment</h2>
-            </div>
-            <p className="mt-4 text-muted-foreground">
-              Advanced medical equipment solutions to enhance healthcare accessibility and outcomes. From diagnostic tools and patient monitoring systems to surgical equipment and rehabilitation aids.
-            </p>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              {equipment.map((e) => (
-                <article
-                  key={e.name}
-                  className="rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
-                >
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+            <Stethoscope className="h-6 w-6" />
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight">Medical equipment</h2>
+        </div>
+        <p className="mt-4 max-w-3xl text-muted-foreground">
+          Advanced medical equipment solutions to enhance healthcare accessibility and outcomes. From diagnostic tools and patient monitoring systems to surgical equipment and rehabilitation aids.
+        </p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {equipment.map((e) => {
+            const isOpen = openEquipment === e.name;
+            return (
+              <article
+                key={e.name}
+                onMouseEnter={() => setOpenEquipment(e.name)}
+                onMouseLeave={() => setOpenEquipment(null)}
+                onClick={() => setOpenEquipment((cur) => (cur === e.name ? null : e.name))}
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+              >
+                <div className="p-6">
                   <h3 className="text-lg font-bold text-primary-deep">{e.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{e.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-          <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)] md:order-last">
-            <img src={equipmentImg} alt="Modern medical equipment" width={1280} height={896} className="aspect-[4/3] w-full object-cover" loading="lazy" />
-          </div>
+                </div>
+                <div
+                  className={`grid overflow-hidden transition-all duration-500 ease-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="min-h-0 overflow-hidden">
+                    <img
+                      src={e.image}
+                      alt={e.name}
+                      className={`aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out ${
+                        isOpen ? "scale-100" : "scale-110"
+                      }`}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </div>

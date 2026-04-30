@@ -97,15 +97,24 @@ function HomePage() {
                 Learn more about us
               </Link>
             </div>
-            <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4">
+          </div>
+        </div>
+
+        {/* Floating stats card */}
+        <div className="relative z-10 mx-auto -mt-10 max-w-5xl px-4 pb-16 md:-mt-16 md:px-8 md:pb-20">
+          <div
+            className="rounded-2xl bg-white p-8 md:p-12"
+            style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+          >
+            <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-3">
               {[
                 { num: "50+", label: "Products" },
                 { num: "10+", label: "Partner Brands" },
                 { num: "100%", label: "FDA Compliant" },
               ].map((s) => (
                 <div key={s.label}>
-                  <div className="text-3xl font-extrabold text-primary-deep">{s.num}</div>
-                  <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
+                  <div className="text-4xl font-extrabold text-primary-deep md:text-5xl">{s.num}</div>
+                  <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
                 </div>
               ))}
             </div>
