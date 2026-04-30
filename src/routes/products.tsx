@@ -86,21 +86,23 @@ function ProductsPage() {
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:px-8 md:py-20">
-          <div>
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-5 md:px-8 md:py-20">
+          <div className="md:col-span-3">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
-            <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-              A complete portfolio of trusted brands and advanced medical equipment.
+            <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
+              A complete portfolio
+              <span className="block">of trusted brands and</span>
+              <span className="block">advanced medical equipment.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-muted-foreground">
+            <p className="mt-5 max-w-2xl text-muted-foreground">
               Every product meets stringent standards for quality, safety, and regulatory compliance.
             </p>
           </div>
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:col-span-2 md:justify-end">
             <img
               src={brandsImg}
               alt="SG Care branded sample collection tubes"
-              className="w-full max-w-md object-contain"
+              className="w-full max-w-xl object-contain md:scale-110"
               loading="eager"
             />
           </div>

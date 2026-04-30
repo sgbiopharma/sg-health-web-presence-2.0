@@ -90,7 +90,7 @@ function ContactPage() {
             {[
               { icon: Phone, title: "Phone", value: "0917-6788-808     |     0977-811-1186", href: "tel:+639176788808" },
               { icon: Mail, title: "Email", value: "sgbiopharma.ph@gmail.com", href: "mailto:sgbiopharma.ph@gmail.com" },
-              { icon: MapPin, title: "Office", value: "B6 L6 Sapphire St., Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000" },
+              { icon: MapPin, title: "Office", value: "Sapphire St., Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000" },
             ].map((c) => (
               <a
                 key={c.title}

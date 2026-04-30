@@ -20,10 +20,11 @@ function AboutPage() {
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">WHO WE ARE</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Revolutionizing healthcare accessibility, one community at a time.
+          <h1 className="mt-3 max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
+            Revolutionizing healthcare accessibility,
+            <span className="block">one community at a time.</span>
           </h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mt-6 max-w-4xl text-base leading-relaxed text-muted-foreground md:text-lg">
             SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply
             entity that operates as a dedicated wholesale distributor. With deep experience in
             pharmaceutical sales and marketing, we are committed to providing medicines of exceptional

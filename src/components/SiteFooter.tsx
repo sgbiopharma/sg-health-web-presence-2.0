@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-white.png";
 
 export function SiteFooter() {
   return (
@@ -13,7 +13,7 @@ export function SiteFooter() {
               alt="SG Biopharma logo"
               width={320}
               height={320}
-              className="h-20 w-auto rounded-2xl bg-white p-2 object-contain shadow-sm"
+              className="h-28 w-auto object-contain"
             />
             <div className="mt-4 text-xs uppercase tracking-[0.2em] text-primary-foreground/80">
               Delivering Wellness, Ensuring Access
@@ -38,7 +38,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/90">
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><span>0917-6788-808&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0977-811-1186</span></li>
             <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><span>sgbiopharma.ph@gmail.com</span></li>
-            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>B6 L6 Sapphire St., Fortuneville 1, Baliti,<br />San Fernando, Pampanga, Philippines 2000</span></li>
+            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Sapphire St., Fortuneville 1, Baliti,<br />San Fernando, Pampanga, Philippines 2000</span></li>
           </ul>
         </div>
       </div>
