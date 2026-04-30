@@ -60,39 +60,55 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden text-primary-foreground">
+      <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img
             src={heroImg}
             alt="Medical sample collection tubes distributed by SG Global Healthcare"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-right"
           />
-          <div className="absolute inset-0 bg-primary-deep/35" />
-          <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-20 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/0" />
         </div>
 
-        <div className="mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center px-4 py-24 text-center md:min-h-[620px] md:px-8 md:py-32">
-          <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-            Quality healthcare,
-            <span className="block">accessible to every Filipino.</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
-            SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-            vaccines, and advanced medical equipment sourced from world-class manufacturers and delivered with integrity.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-primary-deep shadow-md transition hover:bg-white"
-            >
-              EXPLORE OUR PRODUCTS <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/80 px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground hover:text-primary-deep"
-            >
-              LEARN MORE ABOUT US
-            </Link>
+        <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28 lg:py-32">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-white/70 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary backdrop-blur">
+              <HeartPulse className="h-3.5 w-3.5" /> Delivering Wellness, Ensuring Access
+            </span>
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              Quality healthcare,
+              <span className="block text-primary-deep">accessible to every Filipino.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
+              vaccines, and advanced medical equipment sourced from world-class manufacturers and delivered with integrity.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:scale-[1.02]"
+              >
+                Explore our products <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white"
+              >
+                Learn more about us
+              </Link>
+            </div>
+            <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4">
+              {[
+                { num: "50+", label: "Products" },
+                { num: "10+", label: "Partner Brands" },
+                { num: "100%", label: "FDA Compliant" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div className="text-3xl font-extrabold text-primary-deep">{s.num}</div>
+                  <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -170,25 +186,22 @@ function HomePage() {
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-8">
         <div
-          className="relative overflow-hidden rounded-3xl p-10 text-primary-foreground shadow-[var(--shadow-elegant)] md:p-14"
-          style={{
-            backgroundImage: `linear-gradient(135deg, color-mix(in oklab, var(--primary-deep) 80%, transparent), color-mix(in oklab, var(--primary) 65%, transparent)), url(${ctaBgImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          className="relative overflow-hidden rounded-3xl p-10 shadow-[var(--shadow-soft)] md:p-14"
+          style={{ backgroundColor: "#E0FAE4", color: "#006F24" }}
         >
           <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "#006F24" }}>
                 Partner with us to deliver better healthcare.
               </h2>
-              <p className="mt-3 text-primary-foreground/85">
+              <p className="mt-3" style={{ color: "#006F24" }}>
                 From bulk pharmaceutical orders to medical equipment procurement, our team is ready to support your institution.
               </p>
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-primary-deep shadow-md hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+              style={{ backgroundColor: "#006F24" }}
             >
               CONTACT US TODAY <ArrowRight className="h-4 w-4" />
             </Link>
