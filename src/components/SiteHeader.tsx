@@ -21,7 +21,7 @@ export function SiteHeader() {
             alt="SG Biopharma logo"
             width={320}
             height={320}
-            className="h-14 w-auto object-contain md:h-16"
+            className="h-16 w-auto object-contain md:h-20"
           />
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
