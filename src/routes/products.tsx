@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Pill, Stethoscope, Syringe, ChevronDown } from "lucide-react";
+import { Pill, Stethoscope, Syringe, TestTube, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import brandsImg from "@/assets/brands-tubes.png";
+import sgCareTubesImg from "@/assets/sg-care-tubes.png";
 import patientMonitorsImg from "@/assets/equipment/Patient_monitors.jpg";
 import defibrillatorsImg from "@/assets/equipment/Defibrillators.jpg";
 import ctScannersImg from "@/assets/equipment/CT_scanners.jpg";
@@ -96,9 +97,8 @@ function ProductsPage() {
           <div className="md:col-span-3">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
             <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
-              A complete portfolio of
-              <span className="block">trusted brands and advanced</span>
-              <span className="block">medical equipment.</span>
+              A complete portfolio of trusted brands
+              <span className="block">and advanced medical equipment.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-muted-foreground">
               Every product meets stringent standards for quality, safety, and regulatory compliance.
@@ -115,21 +115,41 @@ function ProductsPage() {
         </div>
       </section>
 
-      {/* Brands */}
+      {/* SG Care */}
       <section className="mx-auto max-w-7xl px-4 pt-16 md:px-8 md:pt-20">
-        <h2 className="text-3xl font-bold tracking-tight">SG Care</h2>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-primary-deep">
-          Filipino-made. FDA-approved. Built for precision.
-        </p>
-        <p className="mt-4 max-w-3xl text-muted-foreground">
-          SG Care is SG Biopharma's own line of FDA-approved diagnostic tubes and vials — engineered
-          for accuracy, safety, and consistent performance in clinical and hospital settings.
-        </p>
-        <p className="mt-3 max-w-3xl text-muted-foreground">
-          Whether for routine blood draws or specialized diagnostics, SG Care tubes and vials are
-          trusted by healthcare professionals across the Philippines for their reliability and
-          compliance with international standards.
-        </p>
+        <div className="grid items-center gap-10 md:grid-cols-5">
+          <div className="md:col-span-3">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+                <TestTube className="h-6 w-6" />
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight">SG Care</h2>
+            </div>
+            <p className="mt-4 text-2xl font-bold tracking-tight text-primary-deep md:text-3xl">
+              Filipino-made. FDA-approved. Built for precision.
+            </p>
+            <p className="mt-4 max-w-2xl text-muted-foreground">
+              SG Care is SG Biopharma's own line of FDA-approved diagnostic tubes and vials —
+              engineered for accuracy, safety, and consistent performance in clinical and hospital
+              settings.
+            </p>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Whether for routine blood draws or specialized diagnostics, SG Care tubes and vials
+              are trusted by healthcare professionals across the Philippines for their reliability
+              and compliance with international standards.
+            </p>
+          </div>
+          <div className="flex justify-center md:col-span-2 md:justify-end">
+            <img
+              src={sgCareTubesImg}
+              alt="SG Care diagnostic blood collection tubes"
+              width={1024}
+              height={768}
+              loading="lazy"
+              className="w-full max-w-md object-contain"
+            />
+          </div>
+        </div>
       </section>
 
       <section id="brands" className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
