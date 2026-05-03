@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Pill, Stethoscope, Syringe, TestTube, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import brandsImg from "@/assets/brands-tubes.png";
 import sgCareTubesImg from "@/assets/sg-care-tubes.png";
 import patientMonitorsImg from "@/assets/equipment/Patient_monitors.jpg";
 import defibrillatorsImg from "@/assets/equipment/Defibrillators.jpg";
@@ -93,25 +92,15 @@ function ProductsPage() {
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-5 md:px-8 md:py-20">
-          <div className="md:col-span-3">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
-            <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
-              A complete portfolio of trusted brands
-              <span className="block">and advanced medical equipment.</span>
-            </h1>
-            <p className="mt-5 max-w-2xl text-muted-foreground">
-              Every product meets stringent standards for quality, safety, and regulatory compliance.
-            </p>
-          </div>
-          <div className="flex justify-center md:col-span-2 md:justify-end">
-            <img
-              src={brandsImg}
-              alt="SG Care branded sample collection tubes"
-              className="w-full max-w-xl object-contain md:scale-110"
-              loading="eager"
-            />
-          </div>
+        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
+          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
+            A complete portfolio of trusted brands
+            <span className="block">and advanced medical equipment.</span>
+          </h1>
+          <p className="mt-5 max-w-3xl text-muted-foreground">
+            Every product meets stringent standards for quality, safety, and regulatory compliance.
+          </p>
         </div>
       </section>
 
