@@ -40,7 +40,7 @@ export function SiteHeader() {
             to="/contact"
             className="ml-3 inline-flex items-center rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.02]"
           >
-            Get in Touch
+            BECOME A DISTRIBUTOR
           </Link>
         </nav>
         <button

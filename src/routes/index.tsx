@@ -80,8 +80,10 @@ function HomePage() {
               <span className="block text-primary-deep">accessible to every Filipino.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              SG Global Healthcare is a trusted wholesale distributor of pharmaceutical products,
-              vaccines, and advanced medical equipment sourced from world-class manufacturers and delivered with integrity.
+              SG Biopharma is a manufacturer and wholesale distributor serving healthcare institutions
+              across the Philippines. We produce SG Care, our own FDA-approved line of diagnostic tubes
+              and vials, and carry a comprehensive portfolio of pharmaceutical products, vaccines, and
+              advanced medical equipment.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -131,7 +133,7 @@ function HomePage() {
               A pharmaceutical distributor built on trust and accessibility.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply company
+              SG Biopharma is a rapidly expanding pharmaceutical and medical supply company
               dedicated to wholesale distribution. We leverage extensive experience in pharmaceutical sales
               and marketing to revolutionize healthcare accessibility. Our mission is to provide medicines
               of exceptional quality at affordable prices.
@@ -165,8 +167,8 @@ function HomePage() {
               </h2>
             </div>
             <p className="max-w-md text-sm text-muted-foreground">
-              Government agencies, hospitals, universities, and private enterprises rely on SG Global
-              Healthcare for consistent, quality healthcare supply.
+              Government agencies, hospitals, universities, and private enterprises rely on
+              SG Biopharma for consistent, quality healthcare supply.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">

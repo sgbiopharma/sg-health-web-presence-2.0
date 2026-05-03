@@ -116,6 +116,22 @@ function ProductsPage() {
       </section>
 
       {/* Brands */}
+      <section className="mx-auto max-w-7xl px-4 pt-16 md:px-8 md:pt-20">
+        <h2 className="text-3xl font-bold tracking-tight">SG Care</h2>
+        <p className="mt-2 text-3xl font-bold tracking-tight text-primary-deep">
+          Filipino-made. FDA-approved. Built for precision.
+        </p>
+        <p className="mt-4 max-w-3xl text-muted-foreground">
+          SG Care is SG Biopharma's own line of FDA-approved diagnostic tubes and vials — engineered
+          for accuracy, safety, and consistent performance in clinical and hospital settings.
+        </p>
+        <p className="mt-3 max-w-3xl text-muted-foreground">
+          Whether for routine blood draws or specialized diagnostics, SG Care tubes and vials are
+          trusted by healthcare professionals across the Philippines for their reliability and
+          compliance with international standards.
+        </p>
+      </section>
+
       <section id="brands" className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
         <div className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">

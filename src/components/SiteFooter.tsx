@@ -44,7 +44,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/15">
         <div className="mx-auto max-w-7xl px-4 py-5 text-xs text-primary-foreground/80 md:px-8">
-          © {new Date().getFullYear()} SG Global Healthcare. All rights reserved.
+          © {new Date().getFullYear()} SG Global Healthcare dba SG Biopharma. All rights reserved.
         </div>
       </div>
     </footer>

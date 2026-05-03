@@ -19,16 +19,17 @@ function AboutPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">WHO WE ARE</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">OUR STORY</p>
           <h1 className="mt-3 text-4xl font-extrabold leading-[1.15] tracking-tight md:text-5xl">
             Revolutionizing healthcare accessibility,
             <span className="block">one community at a time.</span>
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            SG Global Healthcare is a rapidly expanding pharmaceutical and medical supply
-            entity that operates as a dedicated wholesale distributor. With deep experience in
-            pharmaceutical sales and marketing, we are committed to providing medicines of exceptional
-            quality at affordable prices for every Filipino.
+            Founded in 2019 by Mary Sylvette G. Tua, SG Biopharma was built on the belief that
+            healthcare institutions deserve a distribution partner they can truly rely on. Over the
+            years, we have built long-term relationships with government agencies, hospitals, and
+            private institutions across the Philippines — grounded in trust, consistency, and an
+            uncompromising standard of quality.
           </p>
         </div>
       </section>
@@ -41,18 +42,20 @@ function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our offerings</h2>
             <p className="mt-5 text-muted-foreground">
-              SG Global Healthcare is committed to providing a comprehensive range of pharmaceutical
-              solutions, including branded and generic medications.
+              SG Biopharma provides a comprehensive range of pharmaceutical solutions to healthcare
+              institutions across the Philippines.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our portfolio specializes in cardiology, nephrology, and internal medicine, sourced from
-              reputable companies known for high manufacturing and importation standards. We prioritize
-              quality and affordability so Filipinos can access the medicines they need to lead healthier
-              lives.
+              Our flagship product, SG Care, is an FDA-approved line of diagnostic tubes and vials
+              developed and manufactured in-house. It is trusted by hospitals and healthcare
+              institutions across the Philippines for its precision, safety, and reliability.
             </p>
             <p className="mt-4 text-muted-foreground">
-              SG Global Healthcare takes pride in our unwavering commitment to the health and
-              well-being of every customer we serve.
+              We distribute a curated selection of pharmaceutical brands specializing in cardiology,
+              nephrology, and internal medicine, sourced from reputable companies known for high
+              manufacturing and importation standards. We also carry a comprehensive vaccine portfolio
+              and a range of advanced medical equipment to serve the full spectrum of institutional
+              healthcare needs.
             </p>
           </div>
         </div>
