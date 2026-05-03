@@ -94,11 +94,11 @@ function ProductsPage() {
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Our Products</p>
-          <h1 className="mt-3 max-w-[640px] text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl">
-            A complete portfolio of trusted brands
+          <h1 className="mt-3 text-4xl font-extrabold leading-[1.15] tracking-tight md:text-5xl">
+            <span className="block">A complete portfolio of trusted brands</span>
             <span className="block">and advanced medical equipment.</span>
           </h1>
-          <p className="mt-5 max-w-[640px] text-muted-foreground">
+          <p className="mt-5 text-muted-foreground">
             Every product meets stringent standards for quality, safety, and regulatory compliance.
           </p>
         </div>
