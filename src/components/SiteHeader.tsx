@@ -37,7 +37,14 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href="mailto:infosgbiopharma.ph@gmail.com?subject=Distributor%20Inquiry"
+            href="mailto:infosgbiopharma.ph@gmail.com?subject=Distributor+Inquiry"
+            rel="noopener"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href =
+                "mailto:infosgbiopharma.ph@gmail.com?subject=" +
+                encodeURIComponent("Distributor Inquiry");
+            }}
             className="ml-3 inline-flex items-center rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.02]"
           >
             BECOME A DISTRIBUTOR
