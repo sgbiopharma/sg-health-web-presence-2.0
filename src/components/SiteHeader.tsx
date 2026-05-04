@@ -10,6 +10,8 @@ const nav = [
   { to: "/contact", label: "Contact Us" },
 ] as const;
 
+const distributorMailto = "mailto:infosgbiopharma.ph@gmail.com?subject=Distributor%20Inquiry";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
@@ -37,14 +39,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href="mailto:infosgbiopharma.ph@gmail.com?subject=Distributor+Inquiry"
-            rel="noopener"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href =
-                "mailto:infosgbiopharma.ph@gmail.com?subject=" +
-                encodeURIComponent("Distributor Inquiry");
-            }}
+            href={distributorMailto}
             className="ml-3 inline-flex items-center rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.02]"
           >
             BECOME A DISTRIBUTOR
@@ -74,6 +69,13 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
+            <a
+              href={distributorMailto}
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)]"
+            >
+              BECOME A DISTRIBUTOR
+            </a>
           </nav>
         </div>
       )}
