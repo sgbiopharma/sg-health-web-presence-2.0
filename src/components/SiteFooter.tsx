@@ -8,13 +8,15 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-4 md:px-8">
         <div className="md:col-span-2">
           <div>
-            <img
-              src={logo}
-              alt="SG Biopharma logo"
-              width={320}
-              height={320}
-              className="h-28 w-auto object-contain"
-            />
+            <Link to="/" aria-label="Go to homepage" className="inline-block">
+              <img
+                src={logo}
+                alt="SG Biopharma logo"
+                width={320}
+                height={320}
+                className="h-28 w-auto object-contain"
+              />
+            </Link>
             <div className="mt-4 text-xs uppercase tracking-[0.2em] text-primary-foreground/80">
               Delivering Wellness, Ensuring Access
             </div>
@@ -69,7 +71,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/15">
         <div className="mx-auto max-w-7xl px-4 py-5 text-xs text-primary-foreground/80 md:px-8">
-          © {new Date().getFullYear()} SG Global Healthcare dba SG Biopharma. All rights reserved.
+          © {new Date().getFullYear()} SG Global Healthcare Corp. dba SG Biopharma. All rights reserved.
         </div>
       </div>
     </footer>
