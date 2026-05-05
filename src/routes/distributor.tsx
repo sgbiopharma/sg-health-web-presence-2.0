@@ -87,27 +87,12 @@ function DistributorPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-10 md:grid-cols-[1fr_1.3fr]">
-          {/* Description */}
-          <div className="space-y-6">
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm md:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-primary-deep">
-                Partner with us
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                SG Biopharma is committed to expanding access to high-quality and affordable
-                medicines across the Philippines. We are looking for trusted partners who share
-                our mission to improve healthcare availability nationwide. By becoming a
-                distributor, you join us in delivering reliable pharmaceutical solutions that
-                support healthier communities across the country.
-              </p>
-            </div>
-          </div>
-
+        <div className="grid gap-10 md:grid-cols-[7fr_3fr]">
           {/* Form */}
           <form
             onSubmit={onSubmit}
-            className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-10"
+            className="rounded-3xl border border-border p-6 shadow-[var(--shadow-soft)] md:p-10"
+            style={{ backgroundColor: "#ECFCEF" }}
           >
             {sent ? (
               <div className="flex flex-col items-center py-12 text-center">
@@ -124,7 +109,7 @@ function DistributorPage() {
             ) : (
               <>
                 <h2 className="text-2xl font-bold tracking-tight">Distributor Inquiry</h2>
-                <p className="mt-2 text-sm text-muted-foreground">Tell us about your business and we'll get back to you.</p>
+                <p className="mt-2 text-sm text-muted-foreground">Fill in the form below and our team will get in touch with you shortly.</p>
                 <div className="mt-6 space-y-5">
                   <Field label="Company" error={errors.company}>
                     <input
@@ -190,6 +175,21 @@ function DistributorPage() {
               </>
             )}
           </form>
+
+          {/* Description */}
+          <div className="space-y-6">
+            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm md:p-8">
+              <h2 className="text-2xl font-bold tracking-tight text-primary-deep">
+                Partner with us
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                SG Biopharma is looking for trusted partners to help expand access to quality
+                healthcare products across the Philippines. By becoming a distributor, you play
+                a direct role in bringing reliable pharmaceutical solutions, vaccines, and
+                medical equipment to healthcare institutions nationwide.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
