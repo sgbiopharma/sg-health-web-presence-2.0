@@ -105,8 +105,10 @@ function ProductsPage() {
       </section>
 
       {/* SG Care */}
-      <section className="mx-auto max-w-7xl px-4 pt-16 md:px-8 md:pt-20">
-        <div className="grid items-center gap-10 md:grid-cols-5">
+      <section className="relative overflow-hidden bg-secondary/60 py-16 md:py-20">
+        <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-[image:var(--gradient-primary)] opacity-15 blur-3xl" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-5 md:px-8">
           <div className="md:col-span-3">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[image:var(--gradient-primary)] text-primary-foreground">
