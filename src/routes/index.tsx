@@ -81,11 +81,11 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               SG Biopharma is a manufacturer and wholesale distributor serving healthcare institutions
-              across the Philippines. We produce SG Care, our own FDA-approved line of diagnostic tubes
+              across the Philippines. We distribute SG Care, our own FDA-approved line of diagnostic tubes
               and vials, and carry a comprehensive portfolio of pharmaceutical products, vaccines, and
               advanced medical equipment.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-14 flex flex-col gap-3 sm:flex-row md:mt-16">
               <Link
                 to="/products"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:scale-[1.02]"
@@ -102,27 +102,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Floating stats card — between hero and intro */}
-      <div className="relative z-10 mx-auto max-w-3xl px-4 md:px-8">
-        <div
-          className="-mt-10 rounded-2xl bg-white p-6 md:-mt-14 md:p-8"
-          style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-        >
-          <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-3">
-            {[
-              { num: "50+", label: "Products" },
-              { num: "10+", label: "Partner Brands" },
-              { num: "100%", label: "FDA Compliant" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="text-4xl font-extrabold leading-[1.05] tracking-tight text-primary-deep md:text-5xl lg:text-6xl">{s.num}</div>
-                <div className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Intro */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
@@ -155,6 +134,27 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Floating stats card — between Who we are and Corporate Clients */}
+      <div className="relative z-10 mx-auto max-w-3xl px-4 pb-16 md:px-8 md:pb-20">
+        <div
+          className="rounded-2xl bg-white p-6 md:p-8"
+          style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+        >
+          <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-3">
+            {[
+              { num: "50+", label: "Products" },
+              { num: "10+", label: "Partner Brands" },
+              { num: "100%", label: "FDA Compliant" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-4xl font-extrabold leading-[1.05] tracking-tight text-primary-deep md:text-5xl lg:text-6xl">{s.num}</div>
+                <div className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Corporate Clients */}
       <section className="bg-secondary/40 py-16 md:py-20 backdrop-blur-[2px]">
