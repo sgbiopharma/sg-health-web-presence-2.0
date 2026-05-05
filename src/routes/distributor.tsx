@@ -55,8 +55,15 @@ function DistributorPage() {
         {
           method: "POST",
           mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ type: "distributor", ...result.data }),
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            formType: "distributor",
+            company: result.data.company,
+            name: result.data.name,
+            email: result.data.email,
+            contactNumber: result.data.contact,
+            message: result.data.message,
+          }),
         },
       );
       setSent(true);
