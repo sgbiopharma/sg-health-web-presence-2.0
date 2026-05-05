@@ -52,8 +52,9 @@ function ContactPage() {
         {
           method: "POST",
           mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify({
+            formType: "contact",
             name: result.data.name,
             email: result.data.email,
             message: result.data.message,
