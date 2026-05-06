@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-tubes.jpg";
+import heroImg from "@/assets/hero-tubes.png";
 import ctaBgImg from "@/assets/cta-vaccines.png";
 import cdcLogo from "@/assets/clients/cdc.jpg";
 import ciacLogo from "@/assets/clients/ciac.png";
