@@ -182,12 +182,16 @@ function DistributorPage() {
               <h2 className="text-2xl font-bold tracking-tight text-primary-deep">
                 Partner with us
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                SG Biopharma is looking for trusted partners to help expand access to quality
-                healthcare products across the Philippines. By becoming a distributor, you play
-                a direct role in bringing reliable pharmaceutical solutions, vaccines, and
-                medical equipment to healthcare institutions nationwide.
-              </p>
+              <div className="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground">
+                <p>SG Biopharma is expanding, and we are looking for distribution partners who want to grow with us.</p>
+                <p>
+                  As the manufacturer of SG Care, our own FDA-approved line of diagnostic tubes and vials,
+                  we give our partners access to an exclusive product alongside a comprehensive range of
+                  pharmaceutical solutions, vaccines, and medical equipment. Our distributors enjoy competitive
+                  wholesale pricing on products held to the highest standards of quality and regulatory compliance.
+                </p>
+                <p>Join our network and carry a portfolio that healthcare institutions across the Philippines already depend on.</p>
+              </div>
             </div>
           </div>
         </div>
