@@ -25,6 +25,15 @@ export function SiteFooter() {
             A trusted pharmaceutical and medical supply distributor committed to making quality healthcare
             accessible and affordable across the Philippines.
           </p>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-widest">Explore</h4>
+          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/85">
+            <li><Link to="/" className="hover:text-white">Home</Link></li>
+            <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link to="/products" className="hover:text-white">Our Products</Link></li>
+            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+          </ul>
           <div className="mt-6 flex items-center gap-3">
             <a
               href="#"
@@ -50,15 +59,6 @@ export function SiteFooter() {
               </svg>
             </a>
           </div>
-        </div>
-        <div>
-          <h4 className="text-sm font-semibold uppercase tracking-widest">Explore</h4>
-          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/85">
-            <li><Link to="/" className="hover:text-white">Home</Link></li>
-            <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/products" className="hover:text-white">Our Products</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
-          </ul>
         </div>
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest">Contact</h4>
