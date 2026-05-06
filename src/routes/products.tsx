@@ -9,7 +9,7 @@ import ventilatorsImg from "@/assets/equipment/Ventilators.jpg";
 import ecgMachinesImg from "@/assets/equipment/ECG_machines.jpg";
 import surgicalEquipmentImg from "@/assets/equipment/Surgical_equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
-import sdBiosensorLogo from "@/assets/brands/sd-biosensor.jpg";
+import sdBiosensorLogo from "@/assets/brands/sd-biosensor.png";
 import wondfoLogo from "@/assets/brands/wondfo.jpg";
 import indoplasLogo from "@/assets/brands/indoplas.jpg";
 import mindrayLogo from "@/assets/brands/mindray.png";
