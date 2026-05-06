@@ -11,13 +11,13 @@ import surgicalEquipmentImg from "@/assets/equipment/Surgical_equipment.jpg";
 import abbottLogo from "@/assets/brands/abbott.jpg";
 import sdBiosensorLogo from "@/assets/brands/sd-biosensor.png";
 import wondfoLogo from "@/assets/brands/wondfo.jpg";
-import indoplasLogo from "@/assets/brands/indoplas.jpg";
+import indoplasLogo from "@/assets/brands/indoplas.png";
 import mindrayLogo from "@/assets/brands/mindray.png";
 import fujifilmLogo from "@/assets/brands/fujifilm.png";
 import gskLogo from "@/assets/brands/gsk.jpg";
 import sanofiLogo from "@/assets/brands/sanofi.png";
 import unilabLogo from "@/assets/brands/unilab.jpg";
-import saharLogo from "@/assets/brands/sahar.jpg";
+import saharLogo from "@/assets/brands/sahar.png";
 import ankeLogo from "@/assets/brands/anke.jpg";
 import nelpaLogo from "@/assets/brands/nelpa.jpg";
 
