@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Linkedin, Facebook, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -89,14 +89,16 @@ function ContactPage() {
           {/* Details */}
           <div className="space-y-4">
             {[
-              { icon: Phone, title: "Phone", value: "0917-6788-808     |     0977-811-1186", href: "tel:+639176788808" },
-              { icon: Mail, title: "Email", value: "infosgbiopharma.ph@gmail.com", href: "mailto:infosgbiopharma.ph@gmail.com" },
-              { icon: MapPin, title: "Office", value: "Sapphire St., Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000" },
+              { icon: Phone, title: "Phone", value: "0917-6788-808     |     0977-811-1186", href: "tel:+639176788808", bg: undefined as string | undefined },
+              { icon: Mail, title: "Email", value: "infosgbiopharma.ph@gmail.com", href: "mailto:infosgbiopharma.ph@gmail.com", bg: "#EFFCF1" },
+              { icon: MapPin, title: "Office", value: "Sapphire St., Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000", href: undefined, bg: undefined },
+              { icon: Clock, title: "Business Hours", value: "Monday – Saturday · 8:00 AM – 6:00 PM (PHT)", href: undefined, bg: "#EFFCF1" },
             ].map((c) => (
               <a
                 key={c.title}
                 href={c.href ?? "#"}
                 className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+                style={c.bg ? { backgroundColor: c.bg } : undefined}
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground">
                   <c.icon className="h-6 w-6" />
@@ -107,13 +109,9 @@ function ContactPage() {
                 </div>
               </a>
             ))}
-            <div className="rounded-2xl border border-border bg-secondary/50 p-6">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-primary-deep">Business Hours</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Monday – Saturday · 8:00 AM – 6:00 PM (PHT)</p>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-6">
+            <div className="rounded-2xl border border-border bg-card p-6 text-center">
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary-deep">Follow Us</h3>
-              <div className="mt-4 flex items-center gap-3">
+              <div className="mt-4 flex items-center justify-center gap-3">
                 <a
                   href="#"
                   aria-label="LinkedIn"
