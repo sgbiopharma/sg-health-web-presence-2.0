@@ -187,8 +187,11 @@ function DistributorPage() {
                 <p>
                   As the manufacturer of SG Care, our own FDA-approved line of diagnostic tubes and vials,
                   we give our partners access to an exclusive product alongside a comprehensive range of
-                  pharmaceutical solutions, vaccines, and medical equipment. Our distributors enjoy competitive
-                  wholesale pricing on products held to the highest standards of quality and regulatory compliance.
+                  pharmaceutical solutions, vaccines, and medical equipment.
+                </p>
+                <p>
+                  Our distributors also enjoy competitive wholesale pricing on products held to the highest
+                  standards of quality and regulatory compliance.
                 </p>
                 <p>Join our network and carry a portfolio that healthcare institutions across the Philippines already depend on.</p>
               </div>
