@@ -81,7 +81,7 @@ function DistributorPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Partnership</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Become a Distributor now!
+            Become a Distributor Now!
           </h1>
         </div>
       </section>
