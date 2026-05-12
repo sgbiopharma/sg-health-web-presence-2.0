@@ -25,7 +25,7 @@ function AboutPage() {
             <span className="block">one community at a time.</span>
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Founded in 2019, SG Biopharma Pharmaceutical Products Trading (SG Biopharma) was built on
+            Founded in 2020, SG Biopharma Pharmaceutical Products Trading (SG Biopharma) was built on
             the belief that healthcare institutions deserve a distribution partner they can truly rely
             on. Over the years, we have built long-term relationships with government agencies,
             hospitals, and private institutions across the Philippines. Our work is grounded in trust,
