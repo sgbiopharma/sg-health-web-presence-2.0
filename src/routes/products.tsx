@@ -117,7 +117,7 @@ function ProductsPage() {
               <h2 className="text-3xl font-bold tracking-tight">SG Care</h2>
             </div>
             <p className="mt-4 text-2xl font-bold tracking-tight text-primary-deep md:text-3xl">
-              Filipino-made. FDA-approved. Built for precision.
+              FDA-approved. Built for precision.
             </p>
             <p className="mt-4 max-w-2xl text-muted-foreground">
               SG Care is SG Biopharma's own line of FDA-approved diagnostic tubes and vials —
