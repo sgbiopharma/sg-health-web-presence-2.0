@@ -32,7 +32,7 @@ export function SiteFooter() {
             <li><Link to="/" className="hover:text-white">Home</Link></li>
             <li><Link to="/about" className="hover:text-white">About Us</Link></li>
             <li><Link to="/products" className="hover:text-white">Our Products</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+            <li><Link to="/contact" className="hover:text-white">Get a Quote</Link></li>
           </ul>
           <div className="mt-6 flex items-center gap-3">
             <a
