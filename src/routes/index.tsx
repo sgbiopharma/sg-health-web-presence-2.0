@@ -214,7 +214,7 @@ function HomePage() {
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
               style={{ backgroundColor: "#006F24" }}
             >
-              CONTACT US TODAY <ArrowRight className="h-4 w-4" />
+              GET A QUOTE <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
