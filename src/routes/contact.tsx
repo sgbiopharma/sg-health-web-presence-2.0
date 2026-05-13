@@ -81,7 +81,7 @@ function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a Quote</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Request a quote from our team.
+            Fast, transparent pricing for your pharmaceutical needs.
           </h1>
           <p className="mt-5 max-w-2xl text-muted-foreground">
             Tell us what you need — pharmaceuticals, vaccines, or medical equipment — and we'll get back to you with a quote shortly.
@@ -93,6 +93,15 @@ function ContactPage() {
         <div className="grid gap-10 md:grid-cols-[1fr_1.3fr]">
           {/* Details */}
           <div className="space-y-4">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Contact us</p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">
+                Get in touch with our team.
+              </h2>
+              <p className="mt-3 text-muted-foreground">
+                Reach us by phone, email, or visit our office — we're here to help with your pharmaceutical needs.
+              </p>
+            </div>
             {[
               { icon: Phone, title: "Phone", value: "0917-678-8808     |     0977-811-1186", href: "tel:+639176788808", bg: undefined as string | undefined },
               { icon: Mail, title: "Email", value: "infosgbiopharma.ph@gmail.com", href: "mailto:infosgbiopharma.ph@gmail.com", bg: "#EFFCF1" },
@@ -172,8 +181,8 @@ function ContactPage() {
               </div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold tracking-tight">Get a Quote</h2>
-                <p className="mt-2 text-sm text-muted-foreground">Fill in the form, and our team will send you a quote shortly.</p>
+                <h2 className="text-2xl font-bold tracking-tight">Request a quote</h2>
+                <p className="mt-2 text-sm text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
                 <div className="mt-6 space-y-5">
                   <Field label="Company Name" error={errors.company}>
                     <input

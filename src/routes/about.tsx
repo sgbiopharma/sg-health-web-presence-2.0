@@ -24,13 +24,29 @@ function AboutPage() {
             Revolutionizing healthcare accessibility,
             <span className="block">one community at a time.</span>
           </h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mt-6 max-w-5xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Founded in 2020, SG Biopharma Pharmaceutical Products Trading (SG Biopharma) was built on
             the belief that healthcare institutions deserve a distribution partner they can truly rely
             on. Over the years, we have built long-term relationships with government agencies,
             hospitals, and private institutions across the Philippines. Our work is grounded in trust,
             consistency, and an uncompromising standard of quality.
           </p>
+        </div>
+      </section>
+
+      {/* Video strip */}
+      <section className="mx-auto max-w-7xl px-4 pt-4 md:px-8 md:pt-6">
+        <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+          <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/jt3Cr4Tj5fY?autoplay=1&mute=1&loop=1&playlist=jt3Cr4Tj5fY&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0"
+              title="SG Biopharma"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              frameBorder={0}
+            />
+          </div>
         </div>
       </section>
 

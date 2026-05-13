@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Truck, Award, HeartPulse, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-tubes.png";
 import ctaBgImg from "@/assets/cta-vaccines.png";
 import cdcLogo from "@/assets/clients/cdc.jpg";
 import ciacLogo from "@/assets/clients/ciac.png";
@@ -62,9 +61,13 @@ function HomePage() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img
-            src={heroImg}
-            alt="Medical sample collection tubes distributed by SG Global Healthcare"
+          <video
+            src="/homepage-bg.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
             className="h-full w-full object-cover object-right"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/0" />
