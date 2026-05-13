@@ -6,23 +6,25 @@ import { Mail, Phone, MapPin, Send, CheckCircle2, Linkedin, Facebook, Clock } fr
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — SG Global Healthcare" },
-      { name: "description", content: "Get in touch with SG Global Healthcare for pharmaceutical and medical equipment inquiries." },
-      { property: "og:title", content: "Contact SG Global Healthcare" },
-      { property: "og:description", content: "Reach out for pharmaceutical and medical equipment inquiries." },
+      { title: "Get a Quote — SG Global Healthcare" },
+      { name: "description", content: "Request a quote from SG Global Healthcare for pharmaceutical and medical equipment inquiries." },
+      { property: "og:title", content: "Get a Quote — SG Global Healthcare" },
+      { property: "og:description", content: "Request a quote for pharmaceutical and medical equipment inquiries." },
     ],
   }),
   component: ContactPage,
 });
 
 const schema = z.object({
+  company: z.string().trim().min(2, "Please enter your company name").max(150),
   name: z.string().trim().min(2, "Please enter your name").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
+  contact: z.string().trim().min(5, "Please enter a valid contact number").max(40),
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000),
 });
 
 function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ company: "", name: "", email: "", contact: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -54,15 +56,18 @@ function ContactPage() {
           mode: "no-cors",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify({
-            formType: "contact",
+            formType: "quote",
+            sheetName: "Get a Quote Form",
+            company: result.data.company,
             name: result.data.name,
             email: result.data.email,
+            contactNumber: result.data.contact,
             message: result.data.message,
           }),
         },
       );
       setSent(true);
-      setForm({ name: "", email: "", message: "" });
+      setForm({ company: "", name: "", email: "", contact: "", message: "" });
     } catch {
       setSubmitError("Something went wrong. Please try again.");
     } finally {
@@ -74,12 +79,12 @@ function ContactPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Contact us</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a Quote</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Let's deliver better healthcare, together.
+            Request a quote from our team.
           </h1>
           <p className="mt-5 max-w-2xl text-muted-foreground">
-            Questions about our products, partnerships, or bulk orders? Our team will get back to you shortly.
+            Tell us what you need — pharmaceuticals, vaccines, or medical equipment — and we'll get back to you with a quote shortly.
           </p>
         </div>
       </section>
@@ -156,21 +161,31 @@ function ContactPage() {
             {sent ? (
               <div className="flex flex-col items-center py-12 text-center">
                 <CheckCircle2 className="h-14 w-14 text-primary" />
-                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Thank you! Your message has been sent.</h3>
+                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Thank you! Your quote request has been sent.</h3>
                 <button
                   type="button"
                   onClick={() => setSent(false)}
                   className="mt-6 rounded-full border border-primary/30 px-5 py-2 text-sm font-semibold text-primary-deep hover:bg-secondary"
                 >
-                  Send another message
+                  Submit another request
                 </button>
               </div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold tracking-tight">Send us a message</h2>
-                <p className="mt-2 text-sm text-muted-foreground">Fill in the form, and we'll be in touch.</p>
+                <h2 className="text-2xl font-bold tracking-tight">Get a Quote</h2>
+                <p className="mt-2 text-sm text-muted-foreground">Fill in the form, and our team will send you a quote shortly.</p>
                 <div className="mt-6 space-y-5">
-                  <Field label="Name" error={errors.name}>
+                  <Field label="Company Name" error={errors.company}>
+                    <input
+                      type="text"
+                      value={form.company}
+                      onChange={(e) => update("company", e.target.value)}
+                      maxLength={150}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="Your company name"
+                    />
+                  </Field>
+                  <Field label="Full Name" error={errors.name}>
                     <input
                       type="text"
                       value={form.name}
@@ -180,7 +195,7 @@ function ContactPage() {
                       placeholder="Your full name"
                     />
                   </Field>
-                  <Field label="Email" error={errors.email}>
+                  <Field label="Email Address" error={errors.email}>
                     <input
                       type="email"
                       value={form.email}
@@ -190,14 +205,24 @@ function ContactPage() {
                       placeholder="you@company.com"
                     />
                   </Field>
-                  <Field label="Message" error={errors.message}>
+                  <Field label="Contact Number" error={errors.contact}>
+                    <input
+                      type="tel"
+                      value={form.contact}
+                      onChange={(e) => update("contact", e.target.value)}
+                      maxLength={40}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="e.g. 0917-000-0000"
+                    />
+                  </Field>
+                  <Field label="Message / Inquiry" error={errors.message}>
                     <textarea
                       value={form.message}
                       onChange={(e) => update("message", e.target.value)}
                       maxLength={1000}
                       rows={6}
                       className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="Tell us about your inquiry…"
+                      placeholder="Tell us what you'd like a quote for…"
                     />
                   </Field>
                   <button
@@ -205,7 +230,7 @@ function ContactPage() {
                     disabled={submitting}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.01] disabled:opacity-70"
                   >
-                    {submitting ? "Sending…" : (<>Send message <Send className="h-4 w-4" /></>)}
+                    {submitting ? "Sending…" : (<>Request quote <Send className="h-4 w-4" /></>)}
                   </button>
                   {submitError && (
                     <p className="text-center text-sm font-medium text-destructive">{submitError}</p>
