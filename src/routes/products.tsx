@@ -104,6 +104,22 @@ function ProductsPage() {
         </div>
       </section>
 
+      {/* Video strip */}
+      <section className="mx-auto max-w-7xl px-4 pt-8 md:px-8 md:pt-10">
+        <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+          <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/539Dhz4uhUM?autoplay=1&mute=1&loop=1&playlist=539Dhz4uhUM&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0"
+              title="SG Biopharma products"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              frameBorder={0}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* SG Care */}
       <section className="relative overflow-hidden bg-secondary/60 py-16 md:py-20">
         <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
