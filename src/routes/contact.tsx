@@ -122,9 +122,8 @@ function ContactPage() {
               </div>
             ) : (
               <>
-                <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a quote</p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-2xl">Request a quote</h2>
-                <p className="mt-3 text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
+                <h2 className="text-2xl font-bold tracking-tight">Request a quote</h2>
+                <p className="mt-2 text-sm text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
                 <div className="mt-6 space-y-5">
                   <Field label="Company" error={errors.company}>
                     <input
@@ -194,11 +193,8 @@ function ContactPage() {
           {/* Details */}
           <div className="space-y-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Contact us</p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-2xl">
-                Get in touch with our team.
-              </h2>
-              <p className="mt-3 text-muted-foreground">
+              <h2 className="text-2xl font-bold tracking-tight">Contact us</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
                 Reach us by phone, email, or visit our office — we're here to help with your pharmaceutical needs.
               </p>
             </div>
