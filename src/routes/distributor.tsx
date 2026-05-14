@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { Send, CheckCircle2 } from "lucide-react";
+import becomeBg from "@/assets/become.jpg";
 
 export const Route = createFileRoute("/distributor")({
   head: () => ({
@@ -76,8 +77,18 @@ function DistributorPage() {
   }
 
   return (
-    <div>
-      <section className="bg-[image:var(--gradient-soft)]">
+    <div className="relative overflow-hidden">
+      {/* Page background — gradient + image on the right */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[image:var(--gradient-soft)]" />
+        <div
+          className="absolute inset-y-0 right-0 w-full md:w-2/3 lg:w-1/2 bg-cover bg-center bg-no-repeat opacity-60"
+          style={{ backgroundImage: `url(${becomeBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+      </div>
+
+      <section>
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Partnership</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
@@ -86,7 +97,7 @@ function DistributorPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
+      <section className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-20">
         <div className="grid gap-10 md:grid-cols-[7fr_3fr]">
           {/* Form */}
           <form
@@ -108,7 +119,7 @@ function DistributorPage() {
               </div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold tracking-tight">Distributor Inquiry</h2>
+                <h2 className="text-2xl font-bold tracking-tight">Distributor inquiry</h2>
                 <p className="mt-2 text-sm text-muted-foreground">Fill in the form below and our team will get in touch with you shortly.</p>
                 <div className="mt-6 space-y-5">
                   <Field label="Company" error={errors.company}>
