@@ -196,9 +196,8 @@ function DistributorPage() {
               <div className="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground">
                 <p>SG Biopharma is expanding, and we are looking for distribution partners who want to grow with us.</p>
                 <p>
-                  As the manufacturer of SG Care, our own FDA-approved line of diagnostic tubes and vials,
-                  we give our partners access to an exclusive product alongside a comprehensive range of
-                  pharmaceutical solutions, vaccines, and medical equipment.
+                  We offer our partners SG Care, our exclusive FDA-approved line of diagnostic tubes and vials,
+                  alongside a comprehensive range of pharmaceutical solutions, vaccines, and medical equipment.
                 </p>
                 <p>
                   Our distributors also enjoy competitive wholesale pricing on products held to the highest

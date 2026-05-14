@@ -62,9 +62,9 @@ function AboutPage() {
               institutions across the Philippines.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our flagship product, SG Care, is an FDA-approved line of diagnostic tubes and vials
-              developed and manufactured in-house. It is trusted by hospitals and healthcare
-              institutions across the Philippines for its precision, safety, and reliability.
+              Our flagship product, SG Care, is an FDA-approved line of diagnostic tubes and vials.
+              It is trusted by hospitals and healthcare institutions across the Philippines for its
+              precision, safety, and reliability.
             </p>
             <p className="mt-4 text-muted-foreground">
               We distribute a curated selection of pharmaceutical brands specializing in cardiology,
