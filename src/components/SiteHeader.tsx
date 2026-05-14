@@ -76,13 +76,6 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <Link
-              to="/distributor"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)]"
-            >
-              BECOME A DISTRIBUTOR
-            </Link>
           </nav>
         </div>
       )}
