@@ -18,7 +18,7 @@ function AboutPage() {
   return (
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
-        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 md:px-8 md:pt-20 md:pb-8">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">OUR STORY</p>
           <h1 className="mt-3 text-4xl font-extrabold leading-[1.15] tracking-tight md:text-5xl">
             Revolutionizing healthcare accessibility,
@@ -35,7 +35,7 @@ function AboutPage() {
       </section>
 
       {/* Video strip */}
-      <section className="mx-auto max-w-7xl px-4 pt-4 md:px-8 md:pt-6">
+      <section className="mx-auto max-w-7xl px-4 pt-2 md:px-8 md:pt-4">
         <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
           <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
             <iframe

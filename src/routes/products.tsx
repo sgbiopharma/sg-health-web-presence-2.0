@@ -265,7 +265,7 @@ function ProductsPage() {
         <p className="mt-4 max-w-3xl text-muted-foreground">
           Advanced medical equipment solutions to enhance healthcare accessibility and outcomes. From diagnostic tools and patient monitoring systems to surgical equipment and rehabilitation aids.
         </p>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {equipment.map((e) => {
             const isOpen = openEquipment === e.name;
             return (

@@ -191,7 +191,7 @@ function ContactPage() {
           </form>
 
           {/* Details */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:pt-10">
             <div>
               <h2 className="text-2xl font-bold tracking-tight">Contact us</h2>
               <p className="mt-2 text-sm text-muted-foreground">
