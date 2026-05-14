@@ -49,7 +49,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             className="inline-flex items-center rounded-full bg-[image:var(--gradient-primary)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary-foreground shadow-[var(--shadow-soft)]"
           >
-            Distributor
+            Become a Distributor
           </Link>
           <button
             type="button"
