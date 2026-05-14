@@ -43,12 +43,20 @@ export function SiteHeader() {
             BECOME A DISTRIBUTOR
           </Link>
         </nav>
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
+        <div className="flex items-center gap-2 md:hidden">
+          <Link
+            to="/distributor"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center rounded-full bg-[image:var(--gradient-primary)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary-foreground shadow-[var(--shadow-soft)]"
+          >
+            Distributor
+          </Link>
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+            onClick={() => setOpen((v) => !v)}
+          >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
