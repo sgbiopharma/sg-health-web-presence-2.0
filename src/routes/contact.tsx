@@ -122,7 +122,7 @@ function ContactPage() {
               </div>
             ) : (
               <>
-                <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Request a quote</p>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a quote</p>
                 <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">Request a quote</h2>
                 <p className="mt-3 text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
                 <div className="mt-6 space-y-5">
