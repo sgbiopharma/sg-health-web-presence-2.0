@@ -79,18 +79,118 @@ function ContactPage() {
     <div>
       <section className="bg-[image:var(--gradient-soft)]">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a Quote</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Fast, transparent pricing for your pharmaceutical needs.
-          </h1>
-          <p className="mt-5 max-w-2xl text-muted-foreground">
-            Tell us what you need — pharmaceuticals, vaccines, or medical equipment — and we'll get back to you with a quote shortly.
-          </p>
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a Quote</p>
+              <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
+                Fast, transparent pricing for your pharmaceutical needs.
+              </h1>
+            </div>
+            <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+              <video
+                src="/get-a-quote.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="aspect-video w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        <div className="grid gap-10 md:grid-cols-[1fr_1.3fr]">
+        <div className="grid gap-10 md:grid-cols-[1.3fr_1fr]">
+          {/* Form */}
+          <form
+            onSubmit={onSubmit}
+            className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-10"
+          >
+            {sent ? (
+              <div className="flex flex-col items-center py-12 text-center">
+                <CheckCircle2 className="h-14 w-14 text-primary" />
+                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Thank you! Your quote request has been sent.</h3>
+                <button
+                  type="button"
+                  onClick={() => setSent(false)}
+                  className="mt-6 rounded-full border border-primary/30 px-5 py-2 text-sm font-semibold text-primary-deep hover:bg-secondary"
+                >
+                  Submit another request
+                </button>
+              </div>
+            ) : (
+              <>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a quote</p>
+                <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">Request a quote</h2>
+                <p className="mt-3 text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
+                <div className="mt-6 space-y-5">
+                  <Field label="Company" error={errors.company}>
+                    <input
+                      type="text"
+                      value={form.company}
+                      onChange={(e) => update("company", e.target.value)}
+                      maxLength={150}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="Your company name"
+                    />
+                  </Field>
+                  <Field label="Name" error={errors.name}>
+                    <input
+                      type="text"
+                      value={form.name}
+                      onChange={(e) => update("name", e.target.value)}
+                      maxLength={100}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="Your full name"
+                    />
+                  </Field>
+                  <Field label="Email" error={errors.email}>
+                    <input
+                      type="email"
+                      value={form.email}
+                      onChange={(e) => update("email", e.target.value)}
+                      maxLength={255}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="you@company.com"
+                    />
+                  </Field>
+                  <Field label="Contact Number" error={errors.contact}>
+                    <input
+                      type="tel"
+                      value={form.contact}
+                      onChange={(e) => update("contact", e.target.value)}
+                      maxLength={40}
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="e.g. 0917-000-0000"
+                    />
+                  </Field>
+                  <Field label="Message / Inquiry" error={errors.message}>
+                    <textarea
+                      value={form.message}
+                      onChange={(e) => update("message", e.target.value)}
+                      maxLength={1000}
+                      rows={6}
+                      className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      placeholder="Tell us what you'd like a quote for…"
+                    />
+                  </Field>
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.01] disabled:opacity-70"
+                  >
+                    {submitting ? "Sending…" : (<>Request quote <Send className="h-4 w-4" /></>)}
+                  </button>
+                  {submitError && (
+                    <p className="text-center text-sm font-medium text-destructive">{submitError}</p>
+                  )}
+                </div>
+              </>
+            )}
+          </form>
+
           {/* Details */}
           <div className="space-y-4">
             <div>
@@ -161,93 +261,6 @@ function ContactPage() {
               </div>
             </div>
           </div>
-
-          {/* Form */}
-          <form
-            onSubmit={onSubmit}
-            className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-10"
-          >
-            {sent ? (
-              <div className="flex flex-col items-center py-12 text-center">
-                <CheckCircle2 className="h-14 w-14 text-primary" />
-                <h3 className="mt-4 text-2xl font-bold text-primary-deep">Thank you! Your quote request has been sent.</h3>
-                <button
-                  type="button"
-                  onClick={() => setSent(false)}
-                  className="mt-6 rounded-full border border-primary/30 px-5 py-2 text-sm font-semibold text-primary-deep hover:bg-secondary"
-                >
-                  Submit another request
-                </button>
-              </div>
-            ) : (
-              <>
-                <h2 className="text-2xl font-bold tracking-tight">Request a quote</h2>
-                <p className="mt-2 text-sm text-muted-foreground">Tell us what you need, and we'll provide detailed pricing within 24 hours.</p>
-                <div className="mt-6 space-y-5">
-                  <Field label="Company Name" error={errors.company}>
-                    <input
-                      type="text"
-                      value={form.company}
-                      onChange={(e) => update("company", e.target.value)}
-                      maxLength={150}
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="Your company name"
-                    />
-                  </Field>
-                  <Field label="Full Name" error={errors.name}>
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={(e) => update("name", e.target.value)}
-                      maxLength={100}
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="Your full name"
-                    />
-                  </Field>
-                  <Field label="Email Address" error={errors.email}>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => update("email", e.target.value)}
-                      maxLength={255}
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="you@company.com"
-                    />
-                  </Field>
-                  <Field label="Contact Number" error={errors.contact}>
-                    <input
-                      type="tel"
-                      value={form.contact}
-                      onChange={(e) => update("contact", e.target.value)}
-                      maxLength={40}
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="e.g. 0917-000-0000"
-                    />
-                  </Field>
-                  <Field label="Message / Inquiry" error={errors.message}>
-                    <textarea
-                      value={form.message}
-                      onChange={(e) => update("message", e.target.value)}
-                      maxLength={1000}
-                      rows={6}
-                      className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      placeholder="Tell us what you'd like a quote for…"
-                    />
-                  </Field>
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.01] disabled:opacity-70"
-                  >
-                    {submitting ? "Sending…" : (<>Request quote <Send className="h-4 w-4" /></>)}
-                  </button>
-                  {submitError && (
-                    <p className="text-center text-sm font-medium text-destructive">{submitError}</p>
-                  )}
-                </div>
-              </>
-            )}
-          </form>
         </div>
       </section>
     </div>
