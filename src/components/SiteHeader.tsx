@@ -57,8 +57,9 @@ export function SiteHeader() {
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
             onClick={() => setOpen((v) => !v)}
           >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="border-t border-border/60 bg-background md:hidden">
