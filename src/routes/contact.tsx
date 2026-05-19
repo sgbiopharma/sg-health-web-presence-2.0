@@ -199,7 +199,7 @@ function ContactPage() {
               </p>
             </div>
             {[
-              { icon: Phone, title: "Phone", value: "0917-678-8808     |     0977-811-1186", href: "tel:+639176788808", bg: undefined as string | undefined },
+              { icon: Phone, title: "Phone", value: "0917-678-8808", href: "tel:+639176788808", bg: undefined as string | undefined },
               { icon: Mail, title: "Email", value: "infosgbiopharma.ph@gmail.com", href: "mailto:infosgbiopharma.ph@gmail.com", bg: "#EFFCF1" },
               { icon: MapPin, title: "Office", value: "Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000", href: undefined, bg: undefined },
               { icon: Clock, title: "Business Hours", value: "Monday – Saturday · 8:00 AM – 6:00 PM (PHT)", href: undefined, bg: "#EFFCF1" },
@@ -230,14 +230,18 @@ function ContactPage() {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/SG-Biopharma/61587927110398/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[image:var(--gradient-primary)] text-primary-foreground shadow-sm transition hover:scale-105"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://wa.me/639778111186"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="WhatsApp"
                   className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[image:var(--gradient-primary)] text-primary-foreground shadow-sm transition hover:scale-105"
                 >
@@ -246,7 +250,9 @@ function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="viber://chat?number=%2B639778111186"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Viber"
                   className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[image:var(--gradient-primary)] text-primary-foreground shadow-sm transition hover:scale-105"
                 >

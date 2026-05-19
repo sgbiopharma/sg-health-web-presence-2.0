@@ -13,13 +13,14 @@ import oraniLogo from "@/assets/clients/orani.jpg";
 import mchphuLogo from "@/assets/clients/mchphu.png";
 import psauLogo from "@/assets/clients/psau.jpg";
 import sacredHeartLogo from "@/assets/clients/sacred-heart.jpg";
+import pppiLogo from "@/assets/clients/pppi.jpg";
+import ofwHospitalLogo from "@/assets/clients/ofw-hospital.jpg";
+import pampangaLogo from "@/assets/clients/pampanga.jpg";
 import jblmghLogo from "@/assets/clients/jblmgh.jpg";
 import jvghLogo from "@/assets/clients/jvgh.png";
 import angelesLogo from "@/assets/clients/angeles.png";
 import sanFernandoLogo from "@/assets/clients/san-fernando.png";
-import stoRosarioLogo from "@/assets/clients/sto-rosario.png";
 import aspacLogo from "@/assets/clients/aspac.jpg";
-import sercomLogo from "@/assets/clients/sercom.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +37,6 @@ export const Route = createFileRoute("/")({
 const clients = [
   { name: "Clark Development Corporation", logo: cdcLogo },
   { name: "Clark International Airport Corporation", logo: ciacLogo },
-  { name: "CITEM", logo: citemLogo },
   { name: "DepEd — Region III, Division of Pampanga", logo: depedLogo },
   { name: "DOH Central Luzon", logo: dohLogo },
   { name: "GreenCity Medical Center", logo: greencityLogo },
@@ -48,11 +48,11 @@ const clients = [
   { name: "AC Sacred Heart Medical Center", logo: sacredHeartLogo },
   { name: "Jose B. Lingad Memorial General Hospital", logo: jblmghLogo },
   { name: "Joni Villanueva General Hospital", logo: jvghLogo },
-  { name: "Lungsod ng Angeles", logo: angelesLogo },
   { name: "City of San Fernando, Pampanga", logo: sanFernandoLogo },
-  { name: "Sto. Rosario Elementary School — San Luis, Pampanga", logo: stoRosarioLogo },
   { name: "ASPAC", logo: aspacLogo },
-  { name: "Sercom Philippines Inc.", logo: sercomLogo },
+  { name: "Philippine Pharma Procurement, Inc. (PPPI)", logo: pppiLogo },
+  { name: "OFW Hospital", logo: ofwHospitalLogo },
+  { name: "Province of Pampanga", logo: pampangaLogo },
 ];
 
 function HomePage() {
@@ -83,7 +83,7 @@ function HomePage() {
               <span className="block text-primary-deep">accessible to every Filipino.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              SG Biopharma is a manufacturer and wholesale distributor serving healthcare institutions
+              SG Biopharma is an importer and wholesale distributor serving healthcare institutions
               across the Philippines. We distribute SG Care, our own FDA-approved line of diagnostic tubes
               and vials, and carry a comprehensive portfolio of pharmaceutical products, vaccines, and
               advanced medical equipment.
@@ -112,11 +112,11 @@ function HomePage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Who we are</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              A pharmaceutical distributor built on trust and accessibility.
+              A medical importer and distributor built on trust and accessibility.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              SG Biopharma is a rapidly expanding pharmaceutical and medical supply company
-              dedicated to wholesale distribution. We leverage extensive experience in pharmaceutical sales
+              SG Biopharma is a rapidly expanding medical supply company dedicated to importation
+              and wholesale distribution. We leverage extensive experience in pharmaceutical sales
               and marketing to revolutionize healthcare accessibility. Our mission is to provide medicines
               of exceptional quality at affordable prices.
             </p>
