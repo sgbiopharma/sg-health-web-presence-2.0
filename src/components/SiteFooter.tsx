@@ -36,7 +36,9 @@ export function SiteFooter() {
           </ul>
           <div className="mt-6 flex items-center gap-3">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/sg-biopharma/about/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-primary-foreground transition hover:bg-white hover:text-primary-deep"
             >

@@ -223,7 +223,9 @@ function ContactPage() {
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary-deep">Follow Us</h3>
               <div className="mt-4 flex items-center justify-center gap-3">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/sg-biopharma/about/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[image:var(--gradient-primary)] text-primary-foreground shadow-sm transition hover:scale-105"
                 >
