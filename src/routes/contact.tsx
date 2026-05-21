@@ -83,7 +83,7 @@ function ContactPage() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Get a Quote</p>
               <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-                Fast, transparent pricing for your pharmaceutical needs.
+                Fast, transparent pricing for your healthcare supply needs.
               </h1>
             </div>
             <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
@@ -195,7 +195,7 @@ function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold tracking-tight">Contact us</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Reach us by phone, email, or visit our office — we're here to help with your pharmaceutical needs.
+                Reach us by phone, email, or visit our office — we're here to help with your medical supplies and pharmaceutical needs.
               </p>
             </div>
             {[
@@ -223,7 +223,7 @@ function ContactPage() {
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary-deep">Follow Us</h3>
               <div className="mt-4 flex items-center justify-center gap-3">
                 <a
-                  href="https://www.linkedin.com/company/sg-biopharma/about/"
+                  href="https://www.linkedin.com/company/sg-biopharma/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
