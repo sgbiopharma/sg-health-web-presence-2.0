@@ -199,7 +199,7 @@ function ContactPage() {
               </p>
             </div>
             {[
-              { icon: Phone, title: "Phone", value: "0917-678-8808", href: "tel:+639176788808", bg: undefined as string | undefined },
+              { icon: Phone, title: "Phone", value: "0917-678-8808\n(045) 966-7012", href: "tel:+639176788808", bg: undefined as string | undefined },
               { icon: Mail, title: "Email", value: "infosgbiopharma.ph@gmail.com", href: "mailto:infosgbiopharma.ph@gmail.com", bg: "#EFFCF1" },
               { icon: MapPin, title: "Office", value: "Fortuneville 1, Baliti,\nSan Fernando, Pampanga, Philippines 2000", href: undefined, bg: undefined },
               { icon: Clock, title: "Business Hours", value: "Monday – Saturday · 8:00 AM – 6:00 PM (PHT)", href: undefined, bg: "#EFFCF1" },
