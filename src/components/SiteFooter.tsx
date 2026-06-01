@@ -81,7 +81,7 @@ export function SiteFooter() {
           <h4 className="text-sm font-semibold uppercase tracking-widest">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/90">
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><span>0917-678-8808<br />(045) 966-7012</span></li>
-            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><span>infosgbiopharma.ph@gmail.com</span></li>
+            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><span>info@sgbiopharma.health</span></li>
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Fortuneville 1, Baliti,<br />San Fernando, Pampanga, Philippines 2000</span></li>
           </ul>
         </div>
